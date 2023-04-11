@@ -1,0 +1,48 @@
+{
+  "_from": "ajaxchimp@^1.3.0",
+  "_id": "ajaxchimp@1.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-f1IU9CdevbERs2JLGsClNiR/sBiYcsjsBsqA7L8AMwYA9jyzGQyqRaK8nr3GT4/KSpy6o+NOwu+0mCq/XE9xaQ==",
+  "_location": "/ajaxchimp",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "ajaxchimp@^1.3.0",
+    "name": "ajaxchimp",
+    "escapedName": "ajaxchimp",
+    "rawSpec": "^1.3.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.3.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ajaxchimp/-/ajaxchimp-1.3.0.tgz",
+  "_shasum": "d87536954618861cd69d90523f7015f09e4ba9c1",
+  "_spec": "ajaxchimp@^1.3.0",
+  "_where": "C:\\Users\\Natalia\\Documents\\template-oomph\\frontendSale",
+  "bugs": {
+    "url": "https://github.com/scdoshi/jquery-ajaxchimp/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "ajaxchimp",
+  "devDependencies": {},
+  "homepage": "https://github.com/scdoshi/jquery-ajaxchimp",
+  "keywords": [
+    "jquery-ajaxchimp"
+  ],
+  "main": "./jquery.ajaxchimp.js",
+  "name": "ajaxchimp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scdoshi/jquery-ajaxchimp.git"
+  },
+  "scripts": {
+    "build": "npm install"
+  },
+  "title": "ajaxchimp",
+  "version": "1.3.0"
+}

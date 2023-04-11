@@ -1,0 +1,81 @@
+{
+  "_from": "vegas@^2.5.4",
+  "_id": "vegas@2.5.4",
+  "_inBundle": false,
+  "_integrity": "sha512-YwOeugnpDmlPoGUfr5h4CPpFJM5v1Uwbjah1+srewP58JEzHUkBjydEbwAGa9lIaeRnkLhC7Gc7+1vaBgxpURw==",
+  "_location": "/vegas",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "vegas@^2.5.4",
+    "name": "vegas",
+    "escapedName": "vegas",
+    "rawSpec": "^2.5.4",
+    "saveSpec": null,
+    "fetchSpec": "^2.5.4"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vegas/-/vegas-2.5.4.tgz",
+  "_shasum": "8c6e499bbf0642b1d4b9ed626c9d3c9006ea0ee5",
+  "_spec": "vegas@^2.5.4",
+  "_where": "C:\\Users\\Natalia\\Documents\\template-oomph\\frontendSale",
+  "author": {
+    "name": "Jay Salvat"
+  },
+  "bugs": {
+    "url": "https://github.com/jaysalvat/vegas/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Vegas - Fullscreen Backgrounds and Slideshows.",
+  "devDependencies": {
+    "date-format": "^3.0.0",
+    "del": "^6.0.0",
+    "exec": "^0.2.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-bump": "^3.2.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-header": "^2.0.9",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^5.0.2",
+    "jshint": "^2.12.0",
+    "yargs": "^16.2.0"
+  },
+  "homepage": "http://vegas.jaysalvat.com",
+  "keywords": [
+    "background",
+    "slideshow",
+    "fullscreen",
+    "vegas",
+    "jquery-plugin",
+    "jquery",
+    "zepto"
+  ],
+  "license": "MIT",
+  "main": "dist/vegas.min.js",
+  "name": "vegas",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jaysalvat/vegas.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp",
+    "release:major": "gulp release --type major",
+    "release:minor": "gulp release --type minor",
+    "release:patch": "gulp release --type patch"
+  },
+  "version": "2.5.4"
+}
