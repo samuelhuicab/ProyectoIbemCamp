@@ -125,24 +125,22 @@
             <!-- Main Headline Start -->
             <div class="main__headline">
               <div class="headline__content">
-                <span class="headline__subtitle light loading-el loading-el-1">Bienvenidos!</span>
+                <span class="headline__subtitle light loading-el loading-el-1">!Bienvenidos al campamento juvenil "Blindados"¡</span>
                 <h1 class="animated-headline light loading-el loading-el-2">
                   <span id="typed-strings">
-                    <b>Firmes</b>
-                    <b>Inquebrantables</b>
-                    <b>Invulnerables</b>
-                    <b>Vamos</b>
-                    <b>America</b>
-                    <b>Que</b>
-                    <b>Esta</b>
-                    <b>Noche</b>
-                    <b>Debemos</b>
-                    <b>De</b>
-                    <b>Ganar</b>
+                    <b>Blindados</b>
+                    <b>Blindados</b>
+                    <b>Fuertes</b>
+                    <b>Resistentes</b>
+                    <b>Armados</b>
+                    <b>Fortificados</b>
+                    <b>Protegidos</b>
+                    <b>Cercados</b>
+                    <b>Seguros</b>
                   </span>
                   <span id="typed"></span>
                 </h1>
-                <p class="headline__text light loading-el loading-el-3">Campamento Juvenil -- Dios es amor
+                <p class="headline__text light loading-el loading-el-3">¡Hola! ¡Bienvenidos al campamento Blindados! Aquí en Blindados, encontrarás una experiencia emocionante y llena de desafíos que te ayudarán a crecer y a prepararte para enfrentar cualquier situación en la vida.
                 </p>
                 <div class="headline__btnholder loading-el loading-el-4">
                   <a href="Inscripciones.php#live-preview" class="btn btn-solid">
@@ -307,50 +305,12 @@
               <!-- Section Container - Section Title Start -->
               <div class="inner__container">
                 <h2>Información</h2>
-                <span class="section__subtitle">20/07/2023 - 23/07/2023</span>
-                <p class="section__text">I wonder if I've been changed in the night? Let me think.
-                  Was I the same when I got up this morning? I almost think I can remember feeling a little different.
-                  But if I'm not the same, the next question is 'Who in the world am I?' Ah, that's the great puzzle!
+                <span class="section__subtitle">Importante</span>
+                <p class="section__text">Bienvenido a la sección de información esencial, donde encontrarás todo lo que necesitas saber.
+                  Horarios, lugar, precio, etc.
                 </p>
               </div>
               <!-- Section Container - Section Title End -->
-
-              <!-- Section Container - Skillbars Start -->
-              <div class="inner__container">
-                <!-- skillbar single item -->
-                <div class="show-skillbar">
-                  <div class="skillbar" data-percent="95">
-                    <span class="skillbar-title">Design</span>
-                    <p class="skillbar-bar"></p>
-                    <span class="skill-bar-percent"></span>
-                  </div>
-                </div>
-                <!-- skillbar single item -->
-                <div class="show-skillbar">
-                  <div class="skillbar" data-percent="84">
-                    <span class="skillbar-title">Branding</span>
-                    <p class="skillbar-bar"></p>
-                    <span class="skill-bar-percent"></span>
-                  </div>
-                </div>
-                <!-- skillbar single item -->
-                <div class="show-skillbar">
-                  <div class="skillbar" data-percent="90">
-                    <span class="skillbar-title">Marketing</span>
-                    <p class="skillbar-bar"></p>
-                    <span class="skill-bar-percent"></span>
-                  </div>
-                </div>
-                <!-- skillbar single item -->
-                <div class="show-skillbar">
-                  <div class="skillbar" data-percent="73">
-                    <span class="skillbar-title">Selling</span>
-                    <p class="skillbar-bar"></p>
-                    <span class="skill-bar-percent"></span>
-                  </div>
-                </div>
-              </div>
-              <!-- Section Container - Skillbars End -->
 
             </div>
             <!-- Section Content Block End -->
@@ -420,11 +380,9 @@
               <!-- Section Container - Blockquote Start -->
               <div class="inner__container">
                 <blockquote cite="">
-                  <p>My dear, here we must run as fast as we can, just to stay in place.
-                    And if you wish to go anywhere you must run twice as fast as that.</p>
+                  <p>Alégrate, joven, en tu juventud, y que se complazca tu corazón en los días de tu juventud;</p>
                   <cite>
-                    <span>Lewis Carroll</span>
-                    <span>Alice in Wonderland</span>
+                    <span>Eclesiastés 11:9</span>
                   </cite>
                 </blockquote>
               </div>
@@ -451,15 +409,6 @@
             </div>
             <!-- Section Media Content End -->
 
-            <!-- Copyright Start -->
-            <div class="media__copyright">
-              <p class="additional-text light">Made with
-                <i class="fa-solid fa-heart"></i>
-                 by
-                <a class="light" href="https://themeforest.net/user/mix_design" target="_blank">Samuel Huicab</a>
-              </p>
-            </div>
-            <!-- Copyright End -->
 
           </div>
           <!-- Section Media End -->
