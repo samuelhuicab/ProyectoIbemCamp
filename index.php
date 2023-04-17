@@ -319,40 +319,14 @@
             <div class="inner__block bg-dark">
 
               <!-- Section Container - Features Start -->
-              <div class="inner__container grid-block">
+              <div class="inner__container">
               <h2 style="color:white; margin-bottom:0.5em;">Fechas</h2>
               <span style="color:white; " class="section__subtitle">¿Qué días será el campamento?</span>
-                <p style="color:white;" class="section__text">La fecha programada para el campamento "Blindados" son del 20/07/2023 al 23/07/2023.
-                </p>
-                <span style="color:white;" class="section__subtitle">¿Cuándo puedo empezar a Inscribirme?</span>
-                <p style="color:white;" class="section__text">Si estas viendo esta pagina ya puedes inscribirte.
-                </p>
-              </div>
-              <!-- Section Container - Features End -->
-                            <!-- Section Container - Features Start -->
-                            <div class="inner__container grid-block">
-                <div class="container-fluid px-4">
-                  <div class="row gx-5">
-                    <!-- feature item -->
-                    <div class="col-12 col-md-4 features__item">
-                      <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
-                      <h4 class="features__title light">Eye catching<br>design</h4>
-                      <p class="features__text light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <!-- feature item -->
-                    <div class="col-12 col-md-4 features__item">
-                      <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
-                      <h4 class="features__title light">Trendy colors<br>and fonts</h4>
-                      <p class="features__text light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <!-- feature item -->
-                    <div class="col-12 col-md-4 features__item">
-                      <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
-                      <h4 class="features__title light">Custom<br>google map</h4>
-                      <p class="features__text light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </div>
-                </div>
+              <p style="color:white;" class="section__text">La fecha programada para el campamento "Blindados" son del 20/07/2023 al 23/07/2023.
+              </p>
+              <span style="color:white;" class="section__subtitle">¿Cuándo puedo empezar a Inscribirme?</span>
+              <p style="color:white;" class="section__text">Si estas viendo esta pagina ya puedes inscribirte.
+              </p>
               </div>
               <!-- Section Container - Features End -->
 
