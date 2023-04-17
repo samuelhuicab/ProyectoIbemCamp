@@ -230,7 +230,7 @@
                     </ul>
                   </div>
                   <div class="col-12 col-xl-6 text-align-right">
-                    <a class="email-link light" href="mailto:elmesias@gmail.com?subject=Message%20from%20your%20site">elmesias@gmail.com</a>
+                    <a class="email-link light" href="mailto:elmesias@gmail.com?subject=Quiero%20inscribirme%20al%20campamento">elmesias@gmail.com</a>
                   </div>
                 </div>
               </div>
