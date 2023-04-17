@@ -332,8 +332,61 @@
 
             </div>
             <!-- Section Content Block End -->
-
+            <div class="inner__block bg-medium">
+              <div class="inner__container">
+                <h2>Lugar</h2>
+                <span class="section__subtitle"></span>
+                <p class="section__text">Nuestro campamento será en "". Para saber la ubicación del evento presione <a href="https://goo.gl/maps/9WqTJCeXcQi4fWvu8">Aqui</a>
+                </p>
+              </div>
+            </div>
             <!-- Section Content Block Start -->
+
+            <div class="inner__block bg-dark">
+              <div class="inner__container grid-block">
+                <h2 style="color:white;">Esenciales</h2>
+              <span style="color:white; " class="section__subtitle"></span>
+              <p style="color:white;" class="section__text">Se muestra una lista de las cosas esenciales que es requerido que cada campero lleve
+              </p>
+              <div class="container-fluid px-4" style="margin-top: 1em;">
+                <div class="row gx-5">
+                  <!-- feature item -->
+                  <div class="col-12 col-md-4 features__item">
+                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <h4 class="features__title light">Jabón</h4>
+                  </div>
+                  <!-- feature item -->
+                  <div class="col-12 col-md-4 features__item">
+                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <h4 class="features__title light">Hamaca</h4>
+                  </div>
+                  <!-- feature item -->
+                  <div class="col-12 col-md-4 features__item">
+                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <h4 class="features__title light">Cepillo de dientes</h4>
+                  </div>
+                  <!-- feature item -->
+                  <div class="col-12 col-md-4 features__item">
+                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <h4 class="features__title light">Cepillo de dientes</h4>
+                  </div>
+                  <!-- feature item -->
+                  <div class="col-12 col-md-4 features__item">
+                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <h4 class="features__title light">Cepillo de dientes</h4>
+                  </div>
+                  <!-- feature item -->
+                  <div class="col-12 col-md-4 features__item">
+                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <h4 class="features__title light">Cepillo de dientes</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
             <div class="inner__block bg-medium bg-image-bottom">
 
               <!-- Section Container - Blockquote Start -->
