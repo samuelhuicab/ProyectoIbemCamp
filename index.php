@@ -352,7 +352,7 @@
                 <div class="row gx-5">
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="img/imgiben/jabon.jpeg" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/jabon.png" class="features__image">
                     <h4 class="features__title light">Jabón</h4>
                   </div>
                   <!-- feature item -->
