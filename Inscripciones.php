@@ -120,7 +120,7 @@
     <div class="container-fluid px-4">
       <div class="row gx-5">
         <div class="col-12 col-xl-6">
-          <h2>Formulario Inscripción</h2>
+          <h2>Formulario Pre Inscripción</h2>
           <p class="title__text">Llena este formulario para hacer una preinscripcion y ocupar tu lugar.
             Asi será una manera más sencilla para todos.</p>
         </div>
@@ -132,19 +132,19 @@
     <div class="container-fluid px-4">
         <div class="row">
             <div class="col-12">
-                <form class="form form-dark notify-form" id="notify-form">
+                <form class="form form-dark notify-form" name="form-pre" id="form-pre" method="post" action="insertar-admin.php">
                     <div class="container-fluid px-4">
                         <div class="row gx-5">
                           <div class="col-4">
-                            <input class="margin-s transition-el transition-el-4" type="text" placeholder="Nombre Completo*" required>
+                            <input class="margin-s transition-el transition-el-4" name="nomb" type="text" placeholder="Nombre Completo*" required>
                             <span class="inputs-description transition-el transition-el-4">*Requerido</span>
                           </div>
                           <div class="col-4">
-                            <input class="margin-s transition-el transition-el-4" type="email" placeholder="Correo Electronico*" required>
+                            <input class="margin-s transition-el transition-el-4" name="email" type="email" placeholder="Correo Electronico*" required>
                             <span class="inputs-description transition-el transition-el-4">*Requerido</span>
                           </div>
                           <div class="col-4">
-                            <input class="margin-s transition-el transition-el-4" type="number" placeholder="Número Telefonico*" required>
+                            <input class="margin-s transition-el transition-el-4" name="tel" type="number" placeholder="Número Telefonico*" required>
                             <span class="inputs-description transition-el transition-el-4">*Requerido</span>
                           </div>
                         </div>
@@ -216,6 +216,8 @@
 <script src="js/demo/modernizr.js"></script>
 <script src="js/demo/typed.min.js"></script>
 <script src="js/demo/demo.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
 <!-- Load Scripts End -->
 
 </body>
