@@ -150,8 +150,8 @@
                         </div>
                         <div class="row">
                           <div class="col-12">
-                            <input type="hidden" name="login-admin" value="1">
-                            <button name="login_admin" type="submit" class="btn btn-primary btn-block">Pre Inscribir</button>
+                            <input type="hidden" name="register" value="1">
+                            <button name="register" type="submit" class="btn btn-primary btn-block">Pre Inscribir</button>
                           </div>
                         </div>
                       </div>
