@@ -144,7 +144,7 @@
                 </p>
                 <div class="headline__btnholder loading-el loading-el-4">
                   <a href="Inscripciones.php#live-preview" class="btn btn-solid">
-                    <span class="btn-caption">Inscribirme</span>
+                    <span class="btn-caption">Pre Inscribirme</span>
                   </a>
                 </div>
               </div>
@@ -377,7 +377,7 @@
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/hilodental.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Hilo <br> dental</h4>
                   </div>
                   <!-- feature item -->
