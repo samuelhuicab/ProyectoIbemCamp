@@ -74,17 +74,22 @@
       <div class="container-fluid px-4">
           <div class="row gx-5">
             <div class="col-12">
-              <span class="headline__subtitle">Totally updated</span>
+              <span class="headline__subtitle">!Bienvenidos al campamento juvenil "Blindados"¡</span>
               <h1 class="animated-headline">
                 <span id="typed-strings">
-                  <b>Project Starter</b>
-                  <b>Coming Soon</b>
-                  <b>Landing Page</b>
+                  <b>Blindados</b>
+                  <b>Blindados</b>
+                  <b>Fuertes</b>
+                  <b>Resistentes</b>
+                  <b>Armados</b>
+                  <b>Fortificados</b>
+                  <b>Protegidos</b>
+                  <b>Cercados</b>
+                  <b>Seguros</b>
                 </span>
                 <span id="typed"></span>
               </h1>
-              <p>Please welcome new totally updated Oomph - coming soon and portfolio template.
-                Perfect for new product or brand launch, agency landing page, personal portfolio and much more!
+              <p>¡Hola! ¡Bienvenidos al campamento Blindados! Aquí en Blindados, encontrarás una experiencia emocionante y llena de desafíos que te ayudarán a crecer y a prepararte para enfrentar cualquier situación en la vida.
               </p>
               <div class="headline__btngroup">
                 <!-- <a class="btn btn-solid" href="http://themeforest.net/cart/add_items?item_ids=29733294" target="_blank">
@@ -130,24 +135,26 @@
                 <form class="form form-dark notify-form" id="notify-form">
                     <div class="container-fluid px-4">
                         <div class="row gx-5">
-                                <div class="col-4">
-                                    <input class="margin-s transition-el transition-el-4" type="text" placeholder="Nombre Completo*" required>
-                                    <span class="inputs-description transition-el transition-el-4">*Requerido</span>
-                                </div>
-                                <div class="col-4">
-                                    <input class="margin-s transition-el transition-el-4" type="email" placeholder="Correo Electronico*" required>
-                                    <span class="inputs-description transition-el transition-el-4">*Requerido</span>
-                                </div>
-                                <div class="col-4">
-                                    <input class="margin-s transition-el transition-el-4" type="email" placeholder="Email Adress*" required>
-                                    <span class="inputs-description transition-el transition-el-4">*Requerido</span>
-                                </div>
-                                <div class="col-4">
-                                    <input class="margin-s transition-el transition-el-4" type="email" placeholder="Email Adress*" required>
-                                    <span class="inputs-description transition-el transition-el-4">*Requerido</span>
-                                </div>
-                            </div>
+                          <div class="col-4">
+                            <input class="margin-s transition-el transition-el-4" type="text" placeholder="Nombre Completo*" required>
+                            <span class="inputs-description transition-el transition-el-4">*Requerido</span>
+                          </div>
+                          <div class="col-4">
+                            <input class="margin-s transition-el transition-el-4" type="email" placeholder="Correo Electronico*" required>
+                            <span class="inputs-description transition-el transition-el-4">*Requerido</span>
+                          </div>
+                          <div class="col-4">
+                            <input class="margin-s transition-el transition-el-4" type="number" placeholder="Número Telefonico*" required>
+                            <span class="inputs-description transition-el transition-el-4">*Requerido</span>
+                          </div>
                         </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <input type="hidden" name="login-admin" value="1">
+                            <button name="login_admin" type="submit" class="btn btn-primary btn-block">Pre Inscribir</button>
+                          </div>
+                        </div>
+                      </div>
                 </form>
             </div>
         </div>
