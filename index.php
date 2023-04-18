@@ -357,22 +357,22 @@
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/hamaca.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Hamaca</h4>
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/cepillo.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Cepillo de dientes</h4>
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/desodorante.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Desodorante</h4>
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/soga.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Sogas</h4>
                   </div>
                   <!-- feature item -->
