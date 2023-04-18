@@ -218,6 +218,7 @@
 <script src="js/demo/demo.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="administracion/admin-ajax.js"></script>
 <!-- Load Scripts End -->
 
 </body>
