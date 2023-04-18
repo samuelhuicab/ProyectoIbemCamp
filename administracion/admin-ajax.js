@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#crear-admin').on('submit', function(e) {
+  $('#form-pre').on('submit', function(e) {
 
     e.preventDefault();
 
@@ -14,10 +14,13 @@ $(document).ready(function() {
         var resultado = data;
         if (resultado.respuesta == 'exito') {
           Swal.fire(
-                    'Genial!',
-                    'El registro se ha hecho correctamente!',
-                    'success'
-                  )
+            'Genial!',
+            'El registro se ha hecho correctamente!',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = 'index.php';
+          }, 1000);
         }else {
           Swal.fire({
                     icon: 'error',
@@ -31,27 +34,5 @@ $(document).ready(function() {
 
     })
   });
-
-  $('#login-admin').on('submit', function(e) {
-
-    e.preventDefault();
-
-    var datos = $(this).serializeArray();
-
-    $.ajax({
-      type: $(this).attr('method'),
-      data: datos,
-      url: $(this).attr('action'),
-      dataType: 'json',
-      success: function(data) {
-        var resultado = data;
-        console.log(data);
-      }
-
-
-
-    })
-  });
-
 
 });
