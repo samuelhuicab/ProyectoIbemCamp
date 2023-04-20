@@ -4,12 +4,14 @@ if (isset($_POST['register'])) {
     $nombre = $_POST['nomb'];
     $email = $_POST['email'];
     $telefono = $_POST['tel'];
+    $nac = $_POST['nac'];
+    $iglesia = $_POST['iglesia'];
     $status = "A";
   
     try {
         require_once('administracion/include/funciones/bd_conexion.php');
-        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,estatus) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $nombre, $email, $telefono, $status);
+        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,fechaNacimiento,iglesiaPerteneciente,estatus) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $nombre, $email, $telefono, $nac, $iglesia,$status);
         $stmt->execute();
         $id_registro = $stmt->insert_id;
         if ($id_registro > 0) {
