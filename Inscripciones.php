@@ -148,7 +148,7 @@
                             <span class="inputs-description transition-el transition-el-4">*Requerido</span>
                           </div>
                           <div class="col-4">
-                            <input class="margin-s transition-el transition-el-4" name="nac" type="date" step="1" max="2010-01-01" value="2013-01-01" placeholder="Fecha Nacimiento*" required>
+                            <input class="margin-s transition-el transition-el-4" name="nac" type="date" step="1" max="2010-01-01" value="2010-01-01" placeholder="Fecha Nacimiento*" required>
                             <span class="inputs-description transition-el transition-el-4">*Requerido</span>
                           </div>
                           <div class="col-4">
