@@ -147,6 +147,14 @@
                             <input class="margin-s transition-el transition-el-4" name="tel" type="number" placeholder="Número Telefonico*" required>
                             <span class="inputs-description transition-el transition-el-4">*Requerido</span>
                           </div>
+                          <div class="col-4">
+                            <input class="margin-s transition-el transition-el-4" name="nac" type="date" step="1" max="2010-01-01" value="2013-01-01" placeholder="Fecha Nacimiento*" required>
+                            <span class="inputs-description transition-el transition-el-4">*Requerido</span>
+                          </div>
+                          <div class="col-4">
+                            <input class="margin-s transition-el transition-el-4" name="iglesia" type="text" placeholder="Iglesia a la que pertenece">
+                            <span class="inputs-description transition-el transition-el-4">Opcional</span>
+                          </div>
                         </div>
                         <div class="row">
                           <div class="col-12">
