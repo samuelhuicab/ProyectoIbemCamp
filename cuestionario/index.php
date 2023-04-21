@@ -71,7 +71,7 @@
                                         <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                                         <div id="middle-wizard">
                                             <div class="step">
-                                                <h3 class="main_question"><strong>1/4</strong>¿Cómo consideras tu habilidad atletica?</h3>
+                                                <h3 class="main_question"><strong>1/5</strong>¿Cómo consideras tu habilidad atletica?</h3>
 
                                                 <div class="form-group radio_questions">
                                                     <label>Muy buena
@@ -102,179 +102,74 @@
                                             </div><!-- /step 1-->
 
                                             <div class="step">
-                                                <h3 class="main_question"><strong>2/4</strong>What your poject need?</h3>
-
-                                                <div class="row add_bottom_30">
-
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Custom interface and layout" class="icheck required">Custom interface and layout
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Web site design" class="icheck required">Web site design
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Seo optimization" class="icheck required">Seo optimization
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="CMS integrations (Wordpress)" class="icheck required">CMS integrations (Wordpress)
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Domain registration" class="icheck required">Domain registration
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-group checkbox_questions">
-                                                            <label>
-                                                                <input name="question_2[]" type="checkbox" value="Hosting plan" class="icheck required">Hosting plan
-                                                            </label>
-                                                        </div>
-
-                                                    </div>
-                                                </div><!-- /row-->
+                                                <h3 class="main_question"><strong>2/5</strong>¿Practicas algún deporte? si es sí, escribe cúal es</h3>
                                                 <div class="form-group textarea_info">
-                                                    <label>Additional info</label>
-                                                    <textarea name="addtional_info" class="form-control" style="height:150px;" placeholder="How many pages, other details, etc..."></textarea>
+                                                    <textarea name="addtional_info" class="form-control required" style="height:150px;" placeholder=""></textarea>
                                                 </div>
                                             </div><!-- /step 2-->
 
                                             <div class="step">
-                                                <h3 class="main_question"><strong>3/4</strong>Please answer the following questions:</h3>
+                                                <h3 class="main_question"><strong>3/5</strong>¿Cómo te consideras en conocimiento bíblico?</h3>
 
-                                                <div class="row">
+                                                <div class="form-group radio_questions">
+                                                    <label>Muy bueno
+                                                        <input name="question_1" type="radio" value="Muy buena" class="icheck required">
+                                                    </label>
+                                                </div>
+                                                <div class="form-group radio_questions">
+                                                    <label>Bueno
+                                                        <input name="question_1" type="radio" value="Buena" class="icheck required">
+                                                    </label>
+                                                </div>
+                                                <div class="form-group radio_questions">
+                                                    <label>Ni malo ni bueno
+                                                        <input name="question_1" type="radio" value="Ni malo ni bueno" class="icheck required">
+                                                    </label>
+                                                </div>
+                                                <div class="form-group radio_questions">
+                                                    <label>Malo
+                                                        <input name="question_1" type="radio" value="Malo" class="icheck required">
+                                                    </label>
+                                                </div>
+                                                <div class="form-group radio_questions">
+                                                    <label>Muy malo
+                                                        <input name="question_1" type="radio" value="Muy malo" class="icheck required">
+                                                    </label>
+                                                </div>
 
-                                                    <div class="col-lg-10">
-                                                        <div class="form-group select">
-                                                            <label>If you already have an hosting plan, please define:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_1">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Unix/Linux + Mysql">Unix/Linux + Mysql</option>
-                                                                    <option value="Windows + Sql">Windows + Sql</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
-
-                                                        <div class="form-group select">
-                                                            <label>If you need an hosting plan, please define which one:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_2">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Hosting Plan 1 year + Mysql database 500MB">1 year + Mysql database 500MB</option>
-                                                                    <option value="Hosting Plan 2 year + Mysql database 500MB">2 year + Mysql database 500MB</option>
-                                                                    <option value="Hosting Plan 2 year + Mysql database 1GB">2 year + Mysql database 1GB</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
-
-                                                        <div class="form-group select">
-                                                            <label>If you need a newsletter campaign, please define the provider you prefer:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_3">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Mailchimp">Mailchimp</option>
-                                                                    <option value="CampaignMonitor">CampaignMonitor</option>
-                                                                    <option value="MailUp">MailUp</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
-                                                    </div>
-                                                </div><!-- /row-->
-                                            </div><!-- /step 3-->
+                                            </div><!-- /step 1-->
 
                                             <div class="step">
-                                                <h3 class="main_question"><strong>4/5</strong>Please answer the following questions:</h3>
-                                                <div class="row">
-
-                                                    <div class="col-lg-10">
-                                                        <div class="form-group select">
-                                                            <label>Hola que haces:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_1">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Unix/Linux + Mysql">Unix/Linux + Mysql</option>
-                                                                    <option value="Windows + Sql">Windows + Sql</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
-
-                                                        <div class="form-group select">
-                                                            <label>muy bien:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_2">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Hosting Plan 1 year + Mysql database 500MB">1 year + Mysql database 500MB</option>
-                                                                    <option value="Hosting Plan 2 year + Mysql database 500MB">2 year + Mysql database 500MB</option>
-                                                                    <option value="Hosting Plan 2 year + Mysql database 1GB">2 year + Mysql database 1GB</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
-
-                                                        <div class="form-group select">
-                                                            <label>If you need a newsletter campaign, please define the provider you prefer:</label>
-                                                            <div class="styled-select">
-                                                                <select class="required" name="select_3">
-                                                                    <option value="" selected>Select</option>
-                                                                    <option value="Mailchimp">Mailchimp</option>
-                                                                    <option value="CampaignMonitor">CampaignMonitor</option>
-                                                                    <option value="MailUp">MailUp</option>
-                                                                </select>
-                                                            </div>
-                                                        </div><!-- /select-->
+                                                <h3 class="main_question"><strong>4/5</strong>Constesta estás últimas preguntas</h3>
+                                                <div class="form-group">
+                                                <label>Consideras que los demás te ven como un líder.</label>
+                                                    <div class="styled-select">
+                                                        <select class="required" name="country">
+                                                            <option value="" selected>--Seleccione--</option>
+                                                            <option value="Europe">Si</option>
+                                                            <option value="Asia">No</option>
+                                                        </select>
                                                     </div>
-                                                </div><!-- /row-->
-                                            </div>
+                                                <label>Anteriormente asististe a un campamento juvenil</label>
+                                                    <div class="styled-select">
+                                                        <select class="required" name="country">
+                                                            <option value="" selected>--Seleccione--</option>
+                                                            <option value="Europe">Si</option>
+                                                            <option value="Asia">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /step 2-->
+
 
                                             <div class="submit step">
 
-                                                <h3 class="main_question"><strong>4/4</strong>Please fill with your details</h3>
+                                                <h3 class="main_question"><strong>5/5</strong>¿Te consideras bueno en algún arte?</h3>
 
                                                 <div class="row">
-
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <input type="text" name="company_name" class="form-control" placeholder="Your company name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" name="firstname" class="required form-control" placeholder="First name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" name="lastname" class="required form-control" placeholder="Last name">
-                                                        </div>
-                                                    </div><!-- /col-sm-6 -->
-
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <input type="email" name="email" class="required form-control" placeholder="Your Email">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" name="telephone" class="required form-control" placeholder="Your Telephone">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="styled-select">
-                                                                <select class="required" name="country">
-                                                                    <option value="" selected>Select your country</option>
-                                                                    <option value="Europe">Europe</option>
-                                                                    <option value="Asia">Asia</option>
-                                                                    <option value="North America">North America</option>
-                                                                    <option value="South America">South America</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /col-sm-6 -->
+                                                    <div class="form-group textarea_info">
+                                                        <textarea name="addtional_info" class="form-control required" style="height:150px;" placeholder="como canto, actuación, dibujo, etc."></textarea>
+                                                    </div>
                                                 </div><!-- /row -->
 
                                                 <div class="form-group checkbox_questions">
