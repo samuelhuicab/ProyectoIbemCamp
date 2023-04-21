@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="QUOTE - Request a quote for every type of companies">
     <meta name="author" content="Ansonika">
-    <title>QUOTE - Request a quote for every type of companies</title>
+    <title>Campamento Juvenil IBEM</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -67,7 +67,7 @@
                                         <div id="progressbar"></div>
                                     </div><!-- /top-wizard -->
 
-                                    <form name="example-1" id="wrapped" method="post">
+                                    <form name="formsquad" id="formsquad" method="post" action="altainscripcion.php">
                                         <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                                         <div id="middle-wizard">
                                             <div class="step">
