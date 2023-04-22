@@ -14,13 +14,8 @@ if (isset($_POST['register'])) {
  // $oclsGenericas->m_enviarCorreo($sContraseña, $nombre,$email);
     try {
         require_once('administracion/include/funciones/bd_conexion.php');
-<<<<<<< HEAD
-        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,estatus) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param($nombre, $email, $telefono, $status);
-=======
         $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,fechaNacimiento,iglesiaPerteneciente,estatus) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $nombre, $email, $telefono, $nac, $iglesia,$status);
->>>>>>> 78c33dac65545d2701bb8c89cde741a0ae96ed0b
         $stmt->execute();
         $id_registro = $stmt->insert_id;
         if ($id_registro > 0) {
