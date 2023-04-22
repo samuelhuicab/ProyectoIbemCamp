@@ -1,20 +1,25 @@
 <?php 
+include("Negocios/Clases/clsGenericas.php");
+
 if (isset($_POST['register'])) {
 
     $nombre = $_POST['nomb'];
     $email = $_POST['email'];
     $telefono = $_POST['tel'];
     $status = "A";
-  
+  $oclsGenericas = new genericas();
+  $sContrasena = $oclsGenericas->m_generarContraseña($nombre);
+ // $oclsGenericas->m_enviarCorreo($sContraseña, $nombre,$email);
     try {
         require_once('administracion/include/funciones/bd_conexion.php');
         $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,estatus) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $nombre, $email, $telefono, $status);
+        $stmt->bind_param($nombre, $email, $telefono, $status);
         $stmt->execute();
         $id_registro = $stmt->insert_id;
         if ($id_registro > 0) {
+          $oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
           $respuesta = array(
-            'respuesta' => 'exito',
+            'respuesta' => 'exito',             
           );
         }else {
           $respuesta = array(
