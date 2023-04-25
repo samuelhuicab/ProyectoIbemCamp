@@ -146,6 +146,9 @@
                   <a href="Inscripciones.php#live-preview" class="btn btn-solid">
                     <span class="btn-caption">Pre Inscribirme</span>
                   </a>
+                  <a href="administracion/login.php" class="btn btn-solid">
+                    <span class="btn-caption">Ingresar</span>
+                  </a>
                 </div>
               </div>
             </div>
