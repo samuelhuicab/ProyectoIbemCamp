@@ -11,11 +11,11 @@ if (isset($_POST['register'])) {
     $status = "A";
   $oclsGenericas = new genericas();
   $sContrasena = $oclsGenericas->m_generarContraseña($nombre);
- // $oclsGenericas->m_enviarCorreo($sContraseña, $nombre,$email);
+  // $oclsGenericas->m_enviarCorreo($sContraseña, $nombre,$email);
     try {
         require_once('administracion/include/funciones/bd_conexion.php');
-        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,estatus) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param($nombre, $email, $telefono, $status);
+        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,fechaNacimiento,iglesiaPerteneciente,estatus) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss",$nombre, $email, $telefono, $nac, $iglesia,$status);
         $stmt->execute();
         $id_registro = $stmt->insert_id;
         if ($id_registro > 0) {
