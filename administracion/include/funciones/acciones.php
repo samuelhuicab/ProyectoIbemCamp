@@ -8,6 +8,10 @@ if (isset($_POST['login-campers-b'])) {
 
     try {
       require_once('bd_conexion.php');
+      $sql = "SELECT diasCaducidad FROM configuracioncaducidadtoken";
+      $caducidadDias = $conn->query($sql);
+      $resultado = $caducidadDias->fetch_assoc();
+      $diacaducas = $resultado['diasCaducidad'];
       $stmt = $conn->prepare("SELECT usuarioPreInscritoID, nombre, email, iglesiaPerteneciente,token,fechaTokenCreacion FROM usuariopreinscritos WHERE email = ?;");
       $stmt->bind_param("s", $correo);
       $stmt->execute();
@@ -16,10 +20,6 @@ if (isset($_POST['login-campers-b'])) {
         $existe = $stmt->fetch();
         if ($existe) {
           if (password_verify($password, $tokenusuarioPre)) {
-            $sql = "SELECT diasCaducidad FROM configuracioncaducidadtoken";
-            $caducidadDias = $conn->query($sql);
-            $resultado = $caducidadDias->fetch_assoc();
-            $diacaducas = $resultado['diasCaducidad'];
             $fecha1 = DateTime::createFromFormat('Y-m-d H:i:s', $fecha_actual);
             $fecha2 = DateTime::createFromFormat('Y-m-d H:i:s', $fechatokenusuarioPre);
             $fecha1new = $fecha1->format("d-m-Y");
