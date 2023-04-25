@@ -132,7 +132,7 @@
     <div class="container-fluid px-4">
         <div class="row">
             <div class="col-12">
-                <form class="form form-dark notify-form" name="form-pre" id="form-pre" method="post" action="altainscripcion.php">
+                <form class="form form-dark notify-form"  method="post" action="altainscripcion.php">
                     <div class="container-fluid px-4">
                         <div class="row gx-5">
                           <div class="col-4">
