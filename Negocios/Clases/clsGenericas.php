@@ -1,6 +1,6 @@
 <?php 
     class genericas{
-
+        
         function m_generarContraseña(){            
             $psswd = substr( md5(microtime()), 1, 8);
             return $psswd;
@@ -39,8 +39,6 @@
                     }else{
                         echo "Fallo";
                     }
-                    
-
         }
     }
     
