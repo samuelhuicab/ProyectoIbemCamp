@@ -15,12 +15,18 @@ $(document).ready(function() {
         if (resultado.respuesta == 'exito') {
           Swal.fire(
             'Genial!',
-            'El registro se ha hecho correctamente!',
+            'El registro se ha hecho correctamente!, Revise su correo electronico',
             'success'
           )
           setTimeout(function(){
             window.location.href = 'index.php';
           }, 1000);
+        }else if (resultado.respuesta == 'TokenValido') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Tiene Un token valido, revisa tu correo por favor.',
+            })
         }else {
           Swal.fire({
                     icon: 'error',
