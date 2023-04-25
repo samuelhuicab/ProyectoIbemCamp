@@ -33,6 +33,7 @@ if (isset($_POST['login-campers-b'])) {
             }else{
                 session_start();
                 $_SESSION['nombre'] = $nombreusuarioPre;
+                $_SESSION['correo'] = $emailusuarioPre;
                 $respuesta = array('respuesta' => 'exito' );
             }
           }else {
