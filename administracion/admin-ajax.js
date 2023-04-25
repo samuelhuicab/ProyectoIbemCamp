@@ -57,7 +57,7 @@ $(document).ready(function() {
         if (resultado.respuesta == 'exito') {
           setTimeout(function(){
             window.location.href = '../cuestionario/index.php';
-          }, 1000);
+          }, 100);
         }else if (resultado.respuesta == 'TokenVencido') {
           Swal.fire({
             icon: 'error',
