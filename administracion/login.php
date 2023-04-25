@@ -30,9 +30,9 @@ if ($cerrar_session) {
         <div class="col-5 banner">
             <nav class="navbar">
                 <div class="container">
-                  <!-- <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=100063736765871">
-                    <img class="logo" src="img/logo2.png" alt="CountBack" width="200" height="200">
-                  </a> -->
+                  <a class="navbar-brand" href="login_admin.php">
+                    <p>Ingresar Admin</p>
+                  </a>
                 </div>
               </nav>
               <div class="contenedorlogin">
@@ -40,10 +40,13 @@ if ($cerrar_session) {
                     <div class="inicio">
                         <div>
                             <h3>Inicia Sesión</h3>
-                            <p>Ingresa la contraseña que se te hizo llegar por correo para que puedas ingresar y terminar la inscripción</p>
+                            <p>Ingresa tu correo y la contraseña que se te hizo llegar por correo para que puedas ingresar y terminar la inscripción</p>
                         </div>
                     </div>
-                    <form role="form" name="login-campers" id="login-campers" method="post" action="Include/Funciones/accionwithuser.php">
+                    <form role="form" name="login-campers" id="login-campers" method="post" action="include/funciones/acciones.php">
+                        <div class="iniciosesion">   
+                            <input placeholder="Correo Electronico" name="correo" type="text" class="input" required="">
+                        </div>
                         <div class="iniciosesion">   
                             <input placeholder="Contraseña" name="pwd" type="password" class="input" required="">
                         </div>
