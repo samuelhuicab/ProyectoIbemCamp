@@ -9,13 +9,17 @@ if (isset($_POST['register'])) {
     $nac = $_POST['nac'];
     $iglesia = $_POST['iglesia'];
     $status = "A";
-  $oclsGenericas = new genericas();
-  $sContrasena = $oclsGenericas->m_generarContraseña($nombre);
+    $fecha_actual = date("Y-m-d H:i:s");
+
+    $oclsGenericas = new genericas();
+    $sContrasena = $oclsGenericas->m_generarContraseña($nombre);
+    $opciones = array('cost' =>  12 );
+    $password_hashed = password_hash($sContrasena, PASSWORD_BCRYPT, $opciones );
   // $oclsGenericas->m_enviarCorreo($sContraseña, $nombre,$email);
     try {
         require_once('administracion/include/funciones/bd_conexion.php');
-        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,fechaNacimiento,iglesiaPerteneciente,estatus) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss",$nombre, $email, $telefono, $nac, $iglesia,$status);
+        $stmt = $conn->prepare("INSERT INTO usuariopreinscritos (nombre,email,telefono,fechaNacimiento,iglesiaPerteneciente,estatus,token,fechaTokenCreacion) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssss",$nombre, $email, $telefono, $nac, $iglesia,$status,$password_hashed,$fecha_actual);
         $stmt->execute();
         $id_registro = $stmt->insert_id;
         if ($id_registro > 0) {
