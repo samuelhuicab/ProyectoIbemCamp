@@ -43,8 +43,55 @@
                         <h3 class="title">Alta Comprobante <span>/ Bienvenido</span></h3>
                     </div>
                 </div><!-- Page Heading End -->
-
             </div><!-- Page Headings End -->
+
+            <div class="col-12">
+                    <!-- News & Updates Wrap Start -->
+                    <div class="box">
+                        <div class="box-head">
+                            <h4 class="title">Comprobantes</h4>
+                        </div>
+                        <div class="box-body">
+                            <!-- News & Updates Inner Start -->
+                            <div class="news-update-inner">
+
+                                <!-- News Item -->
+                                <div class="news-item">
+
+                                    <!-- Content -->
+                                    <div class="content">
+                                        <!-- Category -->
+                                        <div class="categories">
+                                            <a href="#" class="product">Importante</a>
+                                            <a href="#" class="new">Pago</a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h4 class="title"><a href="#">Sube tu comprobante de pago para terminar el proceso de inscripción</a></h4>
+                                        <!-- Meta -->
+                                        <ul class="meta">
+                                            <li><i class="zmdi zmdi-time"></i>100 Houre ago</li>
+                                            <li>Por: <a href="#">Equipo Campamento</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <form role="form" name="form-compro" id="form-compro" method="post" action="">
+                                    <!--Default Uploader Start-->
+                                    <div class="col-lg-6 col-12 mb-20">
+                                        <h6 class="mb-15">Sube tu archivo aqui:</h6>
+                                        <input class="dropify" type="file" required="">
+                                    </div>
+                                    <div class="botoniniciar">
+                                        <input type="hidden" name="subcompro" value="1">
+                                        <button name="subcompro" class="button button-round button-primary" type="submit">
+                                            <span>Subir Comprobante</span>
+                                        </button>
+                                    </div>
+                                </form>
+                                <!--Default Uploader End-->
+                            </div><!-- News & Updates Inner End -->
+                        </div>
+                    </div><!-- News & Updates Wrap End -->
+                </div><!-- News & Updates End -->
 
         </div><!-- Content Body End -->
 
@@ -59,5 +106,11 @@
     <script src="assets/js/plugins/tippy4.min.js.js"></script>
     <!--Main JS-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/plugins/filepond/filepond.min.js"></script>
+    <script src="assets/js/plugins/filepond/filepond-plugin-image-exif-orientation.min.js"></script>
+    <script src="assets/js/plugins/filepond/filepond-plugin-image-preview.min.js"></script>
+    <script src="assets/js/plugins/filepond/filepond.active.js"></script>
+    <script src="assets/js/plugins/dropify/dropify.min.js"></script>
+    <script src="assets/js/plugins/dropify/dropify.active.js"></script>
 </body>
 </html>
