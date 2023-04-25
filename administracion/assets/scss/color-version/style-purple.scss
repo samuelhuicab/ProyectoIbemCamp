@@ -1,0 +1,95 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Adomx - Responsive Bootstrap 4 Admin Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    01. Template default CSS
+    02. Elements CSS
+        Baisc ---------
+        - Accordion
+        - Alert
+        - Avatar
+        - Badge
+        - Button
+        - Card
+        - List
+        - Pagination
+        - Progress
+        - Spinner
+        - Tab
+        Advance ---------
+        - Fullcalendar
+        - Media Player
+        - Ratting
+        - Sweetalert
+        - Toastr
+    03. Form CSS
+        - Basic
+        - Checkbox (Custom)
+        - Radio (Custom)
+        - Range Slider
+        - Select
+        - Switch (Custom)
+    04. Table CSS
+        - Data Table
+        - Foo Table
+        - JSGrid
+    05. Step Widget CSS
+    06. Tippy CSS
+    07. Header CSS
+        - Custom Header Color CSS
+        - RTL Header CSS
+    08. Side Header CSS
+        - Custom Side Header Color CSS
+        - RTL Side Header CSS
+    09. Top Report CSS
+    10. Todo List CSS (App)
+    11. Chat CSS (App)
+    12. Mail CSS (App)
+    13. Chart CSS
+    14. Vmap CSS
+    15. Author CSS
+    16. Login & Resister CSS
+    17. News CSS
+    18. Pricing CSS
+    19. Error CSS
+    20. Footer CSS
+    21. Dark Skin (Dark Version) CSS
+    22. RTL Version CSS
+
+-----------------------------------------------------------------------------------*/
+@import '../variabls';
+$primary: $purple;
+@import '../common';
+@import '../elements';
+@import '../form';
+@import '../table';
+@import '../step-wizard';
+@import '../tippy';
+// Header
+@import '../header';
+@import '../side-header';
+@import '../top-report';
+// Apps (Todo List, Chat & Mail)
+@import '../todo';
+@import '../chat';
+@import '../mail';
+// Chart & Map
+@import '../chart';
+@import '../vmap';
+// Others
+@import '../author';
+@import '../login-register';
+@import '../news';
+@import '../pricing';
+@import '../error';
+@import '../footer';
+
+/*Dark & RTL Version Style*/
+@import '../skin-dark';
+@import '../style-rtl';
