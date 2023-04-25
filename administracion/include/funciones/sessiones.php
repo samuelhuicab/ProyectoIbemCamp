@@ -32,7 +32,7 @@
  };
 
 function revisar_usuario(){
-  return isset($_SESSION['usuario']);
+  return isset($_SESSION['nombre']);
 
 };
 
