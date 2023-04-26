@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
     <link rel="stylesheet" href="assets/css/vendor/cryptocurrency-icons.css">
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+    
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/plugins/plugins.css">
@@ -113,5 +115,8 @@
     <script src="assets/js/plugins/filepond/filepond.active.js"></script>
     <script src="assets/js/plugins/dropify/dropify.min.js"></script>
     <script src="assets/js/plugins/dropify/dropify.active.js"></script>
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="admin-ajax.js"></script>
 </body>
 </html>
