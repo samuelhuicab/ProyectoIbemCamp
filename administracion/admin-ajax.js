@@ -78,6 +78,35 @@ $(document).ready(function() {
     })
   });
 
+  $('#login-admin').on('submit', function(e) {
+
+    e.preventDefault();
+
+    var datos = $(this).serializeArray();
+
+    $.ajax({
+      type: $(this).attr('method'),
+      data: datos,
+      url: $(this).attr('action'),
+      dataType: 'json',
+      success: function(data) {
+        var resultado = data;
+        if (resultado.respuesta == 'exito') {
+          setTimeout(function(){
+            window.location.href = 'index2.php';
+          }, 100);
+        }else {
+          Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Datos incorrectos de sesión',
+                    })
+        }
+      }
+    })
+  });
+
+
   $('#save-admin').on('submit', function(e) {
 
     e.preventDefault();
