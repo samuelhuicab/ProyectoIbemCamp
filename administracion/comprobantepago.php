@@ -74,15 +74,16 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <form role="form" name="form-compro" id="form-compro" method="post" action="">
+                                <form role="form" name="form-compro" id="form-compro" method="post" enctype="multipart/form-data" action="include/funciones/comprobanteinsert.php">
                                     <!--Default Uploader Start-->
                                     <div class="col-lg-6 col-12 mb-20">
                                         <h6 class="mb-15">Sube tu archivo aqui:</h6>
-                                        <input class="dropify" type="file" required="">
+                                        <input class="dropify" name="file" id="file" type="file" required="">
                                     </div>
                                     <div class="botoniniciar">
-                                        <input type="hidden" name="subcompro" value="1">
                                         <button name="subcompro" class="button button-round button-primary" type="submit">
+                                        <input type="hidden" name="usuario" value="<?php echo $_SESSION['nombre'] ?>">
+                                        <input type="hidden" name="idusuario" value="<?php echo $_SESSION['IDusuarioPre'] ?>">
                                             <span>Subir Comprobante</span>
                                         </button>
                                     </div>
