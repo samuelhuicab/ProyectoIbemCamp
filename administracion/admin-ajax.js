@@ -89,7 +89,6 @@ $(document).ready(function() {
       processData: false,
       contentType: false,
       url: $(this).attr('action'),
-      dataType: 'json',
       success: function(data) {
         var resultado = data;
         if (resultado.respuesta == 'exito') {
