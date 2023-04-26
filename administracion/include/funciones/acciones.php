@@ -61,4 +61,44 @@ if (isset($_POST['login-campers-b'])) {
 
  }
 
+if (isset($_POST['save-user'])) {
+
+  $password = $_POST['pwdadmin'];
+  $nombreuser = $_POST['nombreuser'];
+  $usuario = $_POST['useradmin'];
+  $status = "A";
+
+  $opciones = array('cost' =>  12 );
+  $password_hashed = password_hash($password, PASSWORD_BCRYPT, $opciones );
+
+  try {
+    require_once('bd_conexion.php');
+    $stmt = $conn->prepare("INSERT INTO usuariowebadmin (nombre,usuario,pwd,estatus) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $nombreuser, $usuario, $password_hashed, $status);
+    $stmt->execute();
+    $id_registro = $stmt->insert_id;
+    if ($id_registro > 0) {
+      $respuesta = array(
+        'respuesta' => 'exito',
+      );
+    }else {
+      $respuesta = array(
+        'respuesta' => 'error',
+      );
+    }
+    $stmt->close();
+    $conn->close();
+  } catch (\Exception $e) {
+    echo "error ". $e->getMessage();
+  }
+
+
+    die(json_encode($respuesta));
+
+
+
+
+
+ }
+
 ?>
