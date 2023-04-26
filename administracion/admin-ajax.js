@@ -80,6 +80,7 @@ $(document).ready(function() {
 
 
   $('#form-compro').on('submit', function(e) {
+    e.preventDefault();
     var form = document.getElementById("form-compro");
     var formData = new FormData(form);
     $.ajax({
