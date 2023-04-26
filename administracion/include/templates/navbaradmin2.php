@@ -91,15 +91,15 @@
                 <nav class="side-header-menu" id="side-header-menu">
                     <ul>
                         <li><a href="index2.php"><i class="ti-home"></i> <span>Inicio</span></a></li>
-                        <li class="has-sub-menu"><a href="#"><i class="fa fa-id-card"></i> <span>Mantenimiento</span></a>
+                        <li class="has-sub-menu"><a href="#"><i class="ti-settings"></i> <span>Mantenimiento</span></a>
                             <ul class="side-header-sub-menu">
                                 <li><a href="altausuarios.php"><span>Alta Usuarios</span></a></li>
                                 <li><a href="tiempocaducidad.php"><span>Tiempo Caducidad Token</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="usuariospreinscritos.php"><i class="fa fa-wpforms"></i> <span>Personas Pre Inscritas</span></a></li>
-                        <li><a href="visualizacomprobante.php"><i class="fa fa-wpforms"></i> <span>Personas Comprobante</span></a></li>
-                        <li><a href="../cuestionario/index.php"><i class="fa fa-wpforms"></i> <span>Personas Cuestionario</span></a></li>
+                        <li><a href="usuariospreinscritos.php"><i class="fa fa-hand-spock-o"></i> <span>Personas Pre Inscritas</span></a></li>
+                        <li><a href="visualizacomprobante.php"><i class="ti-user"></i> <span>Personas Comprobante</span></a></li>
+                        <li><a href="../cuestionario/index.php"><i class="ti-notepad"></i> <span>Personas Cuestionario</span></a></li>
                     </ul>
                 </nav>
 
