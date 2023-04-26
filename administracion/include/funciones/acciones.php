@@ -143,4 +143,40 @@ if (isset($_POST['save-user'])) {
 
  }
 
+
+
+ if (isset($_POST['save-confdias-b'])) {
+
+  $dias = $_POST['dias'];
+
+  try {
+    require_once('bd_conexion.php');
+    $stmt = $conn->prepare("UPDATE configuracioncaducidadtoken SET diasCaducidad = ?;");
+    $stmt->bind_param("i", $dias);
+    $stmt->execute();
+    if ($stmt->affected_rows) {
+      $respuesta = array(
+        'respuesta' => 'exito',
+      );
+    }else{
+      $respuesta = array(
+        'respuesta' => 'fallo',
+      );
+    }
+    $stmt->close();
+    $conn->close();
+  } catch (\Exception $e) {
+    echo "error ". $e->getMessage();
+  }
+
+
+    die(json_encode($respuesta));
+
+
+
+
+
+ }
+
+
 ?>
