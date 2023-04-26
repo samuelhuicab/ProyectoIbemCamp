@@ -80,17 +80,16 @@ $(document).ready(function() {
 
 
   $('#form-compro').on('submit', function(e) {
-
     e.preventDefault();
-
-    var formData = new FormData(this);
-    var datos = $(this).serializeArray();
+    var form = document.getElementById("form-compro");
+    var formData = new FormData(form);
     $.ajax({
       type: $(this).attr('method'),
       data: formData,
       processData: false,
       contentType: false,
       url: $(this).attr('action'),
+      dataType: 'json',
       success: function(data) {
         var resultado = data;
         if (resultado.respuesta == 'exito') {
