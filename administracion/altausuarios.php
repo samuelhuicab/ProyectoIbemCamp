@@ -30,6 +30,7 @@
 </head>
 <body>
     <div class="main-wrapper">
+    <?php include_once 'include/funciones/sessionesadministrador.php'; ?>
     <?php include_once 'include/templates/navbaradmin2.php'; ?>  
       
         <div class="content-body">
