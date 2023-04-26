@@ -78,4 +78,48 @@ $(document).ready(function() {
     })
   });
 
+
+  $('#form-compro').on('submit', function(e) {
+
+    e.preventDefault();
+
+    var formData = new FormData(this);
+    var datos = $(this).serializeArray();
+    $.ajax({
+      type: $(this).attr('method'),
+      data: formData,
+      processData: false,
+      contentType: false,
+      url: $(this).attr('action'),
+      success: function(data) {
+        var resultado = data;
+        if (resultado.respuesta == 'exito') {
+          Swal.fire(
+            'Genial!',
+            'Su comprobante se ha cargado éxitosamente.',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = 'index.php';
+          }, 100);
+        }else if (resultado.respuesta == 'ArchivoAlta') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Usted ya dio de alta su comprobante. esta en revisión.',
+            })
+        }else {
+          Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Error al subir el comprobante intente más tarde.',
+                    })
+        }
+      }
+
+
+
+    })
+  });
+
 });
