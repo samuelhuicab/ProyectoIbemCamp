@@ -78,17 +78,52 @@ $(document).ready(function() {
     })
   });
 
+  $('#save-admin').on('submit', function(e) {
+
+    e.preventDefault();
+
+    var datos = $(this).serializeArray();
+
+    $.ajax({
+      type: $(this).attr('method'),
+      data: datos,
+      url: $(this).attr('action'),
+      dataType: 'json',
+      success: function(data) {
+        var resultado = data;
+        if (resultado.respuesta == 'exito') {
+          Swal.fire(
+            'Genial!',
+            'El registro se ha hecho correctamente!, Revise su correo electronico',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = 'altausuarios.php';
+          }, 2000);
+        }else {
+          Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo a salido mal, intente nuevamente',
+                    })
+        }
+      }
+
+
+
+    })
+  });
 
   $('#form-compro').on('submit', function(e) {
     e.preventDefault();
-    var form = document.getElementById("form-compro");
-    var formData = new FormData(form);
+    var formData = new FormData(this);
     $.ajax({
       type: $(this).attr('method'),
       data: formData,
       processData: false,
       contentType: false,
       url: $(this).attr('action'),
+      dataType: 'json',
       success: function(data) {
         var resultado = data;
         if (resultado.respuesta == 'exito') {
@@ -99,13 +134,16 @@ $(document).ready(function() {
           )
           setTimeout(function(){
             window.location.href = 'index.php';
-          }, 100);
+          }, 1000);
         }else if (resultado.respuesta == 'ArchivoAlta') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Usted ya dio de alta su comprobante. esta en revisión.',
             })
+            setTimeout(function(){
+              window.location.href = 'comprobantepago.php';
+            }, 2000);
         }else {
           Swal.fire({
                     icon: 'error',
@@ -119,5 +157,6 @@ $(document).ready(function() {
 
     })
   });
+
 
 });
