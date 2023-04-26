@@ -55,11 +55,57 @@ if (isset($_POST['login-campers-b'])) {
 
     die(json_encode($respuesta));
 
+ }
+
+
+ if (isset($_POST['login-admin-b'])) {
+
+  $usuario = $_POST['user'];
+  $password = $_POST['pwd'];
+
+  try {
+    require_once('bd_conexion.php');
+    $stmt = $conn->prepare("SELECT usuarioID,nombre,usuario,pwd FROM usuariowebadmin WHERE usuario = ?;");
+    $stmt->bind_param("s", $usuario);
+    $stmt->execute();
+    $stmt->bind_result($id_admin, $nombre_admin, $usuario_admin, $password_admin);
+    if ($stmt->affected_rows) {
+      $existe = $stmt->fetch();
+      if ($existe) {
+        if (password_verify($password, $password_admin)) {
+          session_start();
+          $_SESSION['usuarioAdminID'] = $id_admin;
+          $_SESSION['usuarioAdmin'] = $usuario_admin;
+          $_SESSION['nombreAdmin'] = $nombre_admin;
+          $respuesta = array('respuesta' => 'exito' );
+        }else {
+          $respuesta = array('respuesta' => 'password_incorrecto');
+        }
+      }else {
+        $respuesta = array(
+          'respuesta' => 'no_existe',
+        );
+      }
+    }
+    $stmt->close();
+    $conn->close();
+  } catch (\Exception $e) {
+    echo "error ". $e->getMessage();
+  }
+
+
+    die(json_encode($respuesta));
+
 
 
 
 
  }
+
+
+
+
+
 
 if (isset($_POST['save-user'])) {
 
@@ -94,10 +140,6 @@ if (isset($_POST['save-user'])) {
 
 
     die(json_encode($respuesta));
-
-
-
-
 
  }
 
