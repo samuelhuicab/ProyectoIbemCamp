@@ -20,22 +20,35 @@ if (isset($_POST['login-campers-b'])) {
       $existe = $stmt->fetch();
       if ($existe) {
         if (password_verify($password, $tokenusuarioPre)) {
-          $fecha1 = DateTime::createFromFormat('Y-m-d H:i:s', $fecha_actual);
-          $fecha2 = DateTime::createFromFormat('Y-m-d H:i:s', $fechatokenusuarioPre);
-          $fecha1new = $fecha1->format("d-m-Y");
-          $fecha2new = $fecha2->format("d-m-Y");
-          $fecha1new1 = new DateTime($fecha1new);
-          $fecha2new2 = new DateTime($fecha2new);
-          $diferenciadias = $fecha1new1->diff($fecha2new2);
-          $diff = $diferenciadias->days;
-          if ($diff > $diacaducas){
-              $respuesta = array('respuesta' => 'TokenVencido' );
-          }else{
+          $stmt->close();
+          $sql = "SELECT count(*) as Comprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = $IDusuarioPre";
+          $comprobantecount = $conn->query($sql);
+          $dato = $comprobantecount->fetch_assoc();
+          $cuentadato = $dato['Comprobante'];
+          if($cuentadato > 0){
               session_start();
               $_SESSION['nombre'] = $nombreusuarioPre;
               $_SESSION['correo'] = $emailusuarioPre;
               $_SESSION['IDusuarioPre'] = $IDusuarioPre;
               $respuesta = array('respuesta' => 'exito' );
+          }else{
+            $fecha1 = DateTime::createFromFormat('Y-m-d H:i:s', $fecha_actual);
+            $fecha2 = DateTime::createFromFormat('Y-m-d H:i:s', $fechatokenusuarioPre);
+            $fecha1new = $fecha1->format("d-m-Y");
+            $fecha2new = $fecha2->format("d-m-Y");
+            $fecha1new1 = new DateTime($fecha1new);
+            $fecha2new2 = new DateTime($fecha2new);
+            $diferenciadias = $fecha1new1->diff($fecha2new2);
+            $diff = $diferenciadias->days;
+            if ($diff > $diacaducas){
+                $respuesta = array('respuesta' => 'TokenVencido' );
+            }else{
+                session_start();
+                $_SESSION['nombre'] = $nombreusuarioPre;
+                $_SESSION['correo'] = $emailusuarioPre;
+                $_SESSION['IDusuarioPre'] = $IDusuarioPre;
+                $respuesta = array('respuesta' => 'exito' );
+            }
           }
         }else {
           $respuesta = array('respuesta' => 'password_incorrecto');
@@ -46,7 +59,6 @@ if (isset($_POST['login-campers-b'])) {
         );
       }
     }
-    $stmt->close();
     $conn->close();
   } catch (\Exception $e) {
     echo "error ". $e->getMessage();
