@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
     <link rel="stylesheet" href="assets/css/vendor/cryptocurrency-icons.css">
     <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
-    
-
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/plugins/plugins.css">
 
@@ -83,6 +81,7 @@
                                         <input class="dropify" name="file" id="file" type="file" required="">
                                     </div>
                                     <div class="botoniniciar">
+                                        <input type="hidden" name="subcompro" value="1">
                                         <button name="subcompro" class="button button-round button-primary" type="submit">
                                         <input type="hidden" name="usuario" value="<?php echo $_SESSION['nombre'] ?>">
                                         <input type="hidden" name="idusuario" value="<?php echo $_SESSION['IDusuarioPre'] ?>">
@@ -100,6 +99,10 @@
 
     <?php include_once 'include/templates/footer.php'; ?> 
     </div>
+
+</body>
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
@@ -115,8 +118,5 @@
     <script src="assets/js/plugins/filepond/filepond.active.js"></script>
     <script src="assets/js/plugins/dropify/dropify.min.js"></script>
     <script src="assets/js/plugins/dropify/dropify.active.js"></script>
-    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="plugins/jquery/jquery.min.js"></script>
     <script src="admin-ajax.js"></script>
-</body>
 </html>
