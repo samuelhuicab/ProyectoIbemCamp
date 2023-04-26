@@ -73,7 +73,7 @@ if (isset($_POST['register'])) {
           $stmt->execute();
           $id_registro = $stmt->insert_id;
           if ($id_registro > 0) {
-          //$oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
+          $oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
           $respuesta = array(
             'respuesta' => 'exito',             
           );
@@ -90,7 +90,7 @@ if (isset($_POST['register'])) {
           $stmt->bind_param("sss", $password_hashed, $fecha_actual, $email);
           $stmt->execute();
           if ($stmt->affected_rows) {
-          //$oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
+          $oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
           $respuesta = array(
             'respuesta' => 'exito',             
           );

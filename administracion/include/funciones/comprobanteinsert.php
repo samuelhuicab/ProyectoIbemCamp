@@ -1,8 +1,7 @@
 <?php 
-$sOperacion=$_POST['subcompro'];
 
 if (isset($_POST['subcompro'])) {
-  echo "llega";
+
 $usuario = $_POST['usuario'];
 $idusuario = $_POST['idusuario'];
 $file_name = $_FILES['file']['name'];
