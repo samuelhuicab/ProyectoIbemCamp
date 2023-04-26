@@ -50,22 +50,22 @@
                                             <!-- <img src="assets/images/avatar/avatar-1.jpg" alt=""> -->
                                             <span class="status"></span>
                                             </span>
-                                            <span class="name"></span>
+                                            <span class="name"><span class="name"><?php echo $_SESSION['nombreAdmin']?></span></span>
                                             </span>
                                         </a>
 
                                         <!-- Dropdown -->
                                         <div class="adomx-dropdown-menu dropdown-menu-user">
                                             <div class="head">
-                                                <h5 class="name"><a href="#"></a></h5>
+                                                <h5 class="name"><a href="#"><?php echo $_SESSION['nombreAdmin']?></a></h5>
                                             </div>
                                             <div class="body">
                                                 <ul>
-                                                    <li><a href="#"><i class="zmdi zmdi-account"></i>Alta Usuarios</a></li>
+                                                    <li><a href="altausuarios.php"><i class="zmdi zmdi-account"></i>Alta Usuarios</a></li>
                                                 </ul>
                                                 <ul>
                                                     <li><a href="#"><i class="zmdi zmdi-settings"></i>Tiempo Caducidad Token</a></li>
-                                                    <li><a href="login_admin.php"><i class="zmdi zmdi-lock-open"></i>Cerrar Sesión</a></li>
+                                                    <li><a href="login_admin.php?cerrar_session=true"><i class="zmdi zmdi-lock-open"></i>Cerrar Sesión</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -94,10 +94,11 @@
                         <li class="has-sub-menu"><a href="#"><i class="fa fa-id-card"></i> <span>Mantenimiento</span></a>
                             <ul class="side-header-sub-menu">
                                 <li><a href="altausuarios.php"><span>Alta Usuarios</span></a></li>
-                                <li><a href="#"><span>Tiempo Caducidad Token</span></a></li>
+                                <li><a href="tiempocaducidad.php"><span>Tiempo Caducidad Token</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="../cuestionario/index.php"><i class="fa fa-wpforms"></i> <span>Personas Pre Inscritas</span></a></li>
+                        <li><a href="usuariospreinscritos.php"><i class="fa fa-wpforms"></i> <span>Personas Pre Inscritas</span></a></li>
+                        <li><a href="visualizacomprobante.php"><i class="fa fa-wpforms"></i> <span>Personas Comprobante</span></a></li>
                         <li><a href="../cuestionario/index.php"><i class="fa fa-wpforms"></i> <span>Personas Cuestionario</span></a></li>
                     </ul>
                 </nav>
