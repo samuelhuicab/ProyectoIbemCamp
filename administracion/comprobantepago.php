@@ -28,6 +28,7 @@
 
     <!-- Custom Style CSS Only For Demo Purpose -->
     <link id="cus-style" rel="stylesheet" href="assets/css/style-primary.css">
+    
 </head>
 <body>
     <div class="main-wrapper">
@@ -83,7 +84,7 @@
                                         <input class="dropify" name="file" id="file" type="file" required="">
                                     </div>
                                     <div class="botoniniciar">
-                                        <button name="subcompro" class="button button-round button-primary" type="submit">
+                                        <button name="subcompro" value="Enviar" id="subcompro" class="button button-round button-primary" type="submit">
                                         <input type="hidden" name="usuario" value="<?php echo $_SESSION['nombre'] ?>">
                                         <input type="hidden" name="idusuario" value="<?php echo $_SESSION['IDusuarioPre'] ?>">
                                             <span>Subir Comprobante</span>
@@ -109,6 +110,7 @@
     <script src="assets/js/plugins/tippy4.min.js.js"></script>
     <!--Main JS-->
     <script src="assets/js/main.js"></script>
+    <script src="admin-ajax.js" type="text/javascript"></script>
     <script src="assets/js/plugins/filepond/filepond.min.js"></script>
     <script src="assets/js/plugins/filepond/filepond-plugin-image-exif-orientation.min.js"></script>
     <script src="assets/js/plugins/filepond/filepond-plugin-image-preview.min.js"></script>
@@ -117,6 +119,6 @@
     <script src="assets/js/plugins/dropify/dropify.active.js"></script>
     <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="admin-ajax.js"></script>
+    
 </body>
 </html>

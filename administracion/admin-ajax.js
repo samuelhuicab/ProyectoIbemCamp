@@ -84,11 +84,12 @@ $(document).ready(function() {
     var form = document.getElementById("form-compro");
     var formData = new FormData(form);
     $.ajax({
+      url: $(this).attr('action'),
       type: $(this).attr('method'),
-      data: formData,
+      data: $("#form-compro").serialize(),
       processData: false,
       contentType: false,
-      url: $(this).attr('action'),
+      
       success: function(data) {
         var resultado = data;
         if (resultado.respuesta == 'exito') {
