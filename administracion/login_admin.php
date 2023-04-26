@@ -42,7 +42,7 @@ if ($cerrar_session) {
                             <h3>Inicia Sesión</h3>
                         </div>
                     </div>
-                    <form role="form" name="login-campers" id="login-campers" method="post" action="Include/Funciones/accionwithuser.php">
+                    <form role="form" name="login-admin" id="login-admin" method="post" action="Include/Funciones/acciones.php">
                         <div class="iniciosesion">   
                             <input placeholder="Usuario" name="user" type="text" class="input" required="">
                         </div>
@@ -50,8 +50,8 @@ if ($cerrar_session) {
                             <input placeholder="Contraseña" name="pwd" type="password" class="input" required="">
                         </div>
                         <div class="botoniniciar">
-                        <input type="hidden" name="login-campers-b" value="1">
-                            <button name="login-campers-b" class="full-rounded" type="submit">
+                        <input type="hidden" name="login-admin-b" value="1">
+                            <button name="login-admin-b" class="full-rounded" type="submit">
                                 <span>Iniciar sesión</span>
                             </button>
                         </div>
