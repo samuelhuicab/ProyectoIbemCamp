@@ -50,7 +50,7 @@
             <?php
                 try {
                     require_once('include/funciones/bd_conexion.php');
-                    $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuariosComprobanteID";
+                    $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' ELSE 'warning' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID";
                     $resultado = $conn->query($sql);
                 } catch (\Exception $e) {
                     echo $e->getMessage();
@@ -74,6 +74,8 @@
                                             <th>Telefono</th>
                                             <th>Estatus</th>
                                             <th>Archivo</th>
+                                            <th>Aceptar Comprobante</th>
+                                            <th>Rechazar Comprobante</th>
                                         </tr>
                                     </thead>
                                     <?php while ($usuarios = $resultado->fetch_assoc()) { ?>
@@ -83,11 +85,29 @@
                                             <td><?php echo $usuarios['nombre']?></td>
                                             <td><?php echo $usuarios['email']?></td>
                                             <td><?php echo $usuarios['telefono']?></td>
-                                            <td><span class="badge badge-success">Activo</span></td>
+                                            <td><span class="badge badge-<?php echo $usuarios['color']?>"><?php echo $usuarios['verificacionComprobante']?></span></td>
                                             <td>
                                                 <div class="table-action-buttons">
                                                     <a class="view button button-box button-xs button-danger" href="comprobantes/<?php echo $usuarios['descripcionArchivo']?>" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
                                                 </div>
+                                            </td>
+                                            <td>
+                                                <form role="form" name="form-validacion" id="form-validacion" method="post" action="include/funciones/acciones.php">
+                                                    <div class="table-action-buttons">
+                                                        <input type="hidden" name="validacion-b-correcta" value="1">
+                                                        <input type="hidden" name="usuarioID" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
+                                                        <button class="edit button button-box button-xs button-success"><i class="ti-check"></i></button>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <form role="form" name="form-validacion-mal" id="form-validacion-mal"  method="post" action="include/funciones/acciones.php">
+                                                    <div class="table-action-buttons">
+                                                        <input type="hidden" name="validacion-b-incorrecta" value="1">
+                                                        <input type="hidden" name="usuarioID2" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
+                                                        <button class="delete button button-box button-xs button-danger"><i class="ti-close"></i></button>
+                                                    </div>
+                                                </form>
                                             </td>
                                         </tr>
                                         <?php } ?>

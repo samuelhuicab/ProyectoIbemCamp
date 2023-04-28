@@ -191,4 +191,80 @@ if (isset($_POST['save-user'])) {
  }
 
 
+ if (isset($_POST['validacion-b-correcta'])) {
+
+  $varificacion = $_POST['validacion-b-correcta'];
+  $userid = $_POST['usuarioID'];
+
+  try {
+    require_once('bd_conexion.php');
+    $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ?;");
+    $stmt->bind_param("ss", $varificacion,$userid);
+    $stmt->execute();
+    if ($stmt->affected_rows) {
+      $respuesta = array(
+        'respuesta' => 'exito',
+      );
+    }else{
+      $respuesta = array(
+        'respuesta' => 'fallo',
+      );
+    }
+    $stmt->close();
+    $conn->close();
+  } catch (\Exception $e) {
+    echo "error ". $e->getMessage();
+  }
+
+
+    die(json_encode($respuesta));
+
+
+
+
+
+ }
+
+ if (isset($_POST['validacion-b-incorrecta'])) {
+
+   $userid2 = $_POST['usuarioID2'];
+
+  try {
+    require_once('bd_conexion.php');
+    $stmt = $conn->prepare("SELECT verificacionComprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
+    $stmt->bind_param("s", $userid2);
+    $stmt->execute();
+    $stmt->bind_result($estaverificado);
+    $stmt->fetch();
+    if ($estaverificado == 1){
+      $respuesta = array(
+        'respuesta' => 'varificado',
+      );
+    }else{
+      $stmt->close();
+      $stmt = $conn->prepare("DELETE FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
+      $stmt->bind_param("s",$userid2);
+      $stmt->execute();
+      if ($stmt->affected_rows) {
+        $respuesta = array(
+          'respuesta' => 'exito',
+        );
+      }else{
+        $respuesta = array(
+          'respuesta' => 'fallo',
+        );
+      }
+    }
+    $stmt->close();
+    $conn->close();
+  } catch (\Exception $e) {
+    echo "error ". $e->getMessage();
+  }
+
+
+    die(json_encode($respuesta));
+
+ }
+
+
 ?>
