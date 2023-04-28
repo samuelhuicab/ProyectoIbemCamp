@@ -120,6 +120,7 @@ h1.light {
 }
 .headline__text.light {
   color: rgba(255, 255, 255, 0.7);
+  font-size: 1.7rem
 }
 .headline__text.light a {
   color: rgba(255, 255, 255, 0.7);
@@ -301,8 +302,8 @@ blockquote.light cite {
 }
 
 .btn-solid {
-  background-color: #00f0ff;
-  border: 1px solid #00f0ff;
+  background-color: #f3eef200;
+  border: 1px solid #f0f2f5;
   color: #1a1a1a;
   -webkit-box-shadow: 0px 6px 38px -9px rgba(0, 240, 255, 0.34);
      -moz-box-shadow: 0px 6px 38px -9px rgba(0, 240, 255, 0.34);
@@ -431,16 +432,16 @@ blockquote.light cite {
 /* Main Section Colors Start */
 /* ------------------------------------------------*/
 .main {
-  background-color: #0c0426;
+  background-color: #ef813c;
 }
 
 .main__content {
-  background-color: #0c0426;
+  background-color: #f4843cfa;
 }
 
 .main__media {
-  background-color: #7d5aed;
-  background-image: url("../../img/svg/bg-gradient-main.svg");
+  background-color: #ef813c;
+  background-image: url("../../img/svg/bg-gradient-main.jpg");
 }
 
 /* ------------------------------------------------*/
@@ -464,7 +465,7 @@ blockquote.light cite {
   color: #444444;
 }
 .no-touch .socials-text li a:hover {
-  color: #7d5aed;
+  color: #ef813c;
 }
 .socials-text.light li a {
   color: rgba(255, 255, 255, 0.7);

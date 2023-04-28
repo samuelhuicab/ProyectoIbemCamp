@@ -33,7 +33,7 @@
 <body>
     <nav id="menu" class="menu">
       <div class="menu__container">
-
+    
         <!-- Navigation Close Button Start -->
         <a id="menu-close" class="section-close light" href="#0"><span></span></a>
         <!-- Navigation Close Button End -->
@@ -106,15 +106,15 @@
 
           <!-- Main Section Content Start -->
           <div class="col-12 col-xl-6 main__content">
-
+          
             <!-- Main Header Start -->
             <div class="main__header">
               <div class="header__container">
                 <div class="header__content">
                   <!-- logo -->
-                  <div class="logo">
-                    <!-- <img src="img/ibemLogo.png" alt="Oomph - Coming Soon & Landing Page Template"> -->
-                  </div>
+                  
+                  <a class="" style="color: #ffffff; font-size: 150%; " href="#0"><img src="img/logo_edet.png" style="width: 60%;" alt=""></a>
+                  
                   <!-- menu trigger -->
                   <a href="#0" id="menu-trigger" class="menu-trigger"><span></span></a>
                 </div>
@@ -125,7 +125,7 @@
             <!-- Main Headline Start -->
             <div class="main__headline">
               <div class="headline__content">
-                <span class="headline__subtitle light loading-el loading-el-1">!Bienvenidos al campamento juvenil "Blindados"¡</span>
+                <span class="headline__subtitle light loading-el loading-el-1">!CAMPAMENTO IBEM¡</span>
                 <h1 class="animated-headline light loading-el loading-el-2">
                   <span id="typed-strings">
                     <b>Blindados</b>
@@ -140,14 +140,14 @@
                   </span>
                   <span id="typed"></span>
                 </h1>
-                <p class="headline__text light loading-el loading-el-3">¡Hola! ¡Bienvenidos al campamento Blindados! Aquí en Blindados, encontrarás una experiencia emocionante y llena de desafíos que te ayudarán a crecer y a prepararte para enfrentar cualquier situación en la vida.
+                <p class="headline__text light loading-el loading-el-3">¡Hola! ¡Bienvenidos al campamento Blindados! Donde encontrarás una experiencia emocionante y llena de desafíos que te ayudarán a crecer y a prepararte para enfrentar situación en la vida.
                 </p>
                 <div class="headline__btnholder loading-el loading-el-4">
                   <a href="Inscripciones.php#live-preview" class="btn btn-solid">
-                    <span class="btn-caption">Pre Inscribirme</span>
+                    <span class="btn-caption" style="color: #f5f3f3;">Pre Inscribirme</span>
                   </a>
                   <a href="administracion/login.php" class="btn btn-solid">
-                    <span class="btn-caption">Ingresar</span>
+                    <span class="btn-caption" style="color: #f5f3f3;">Ingresar</span>
                   </a>
                 </div>
               </div>
