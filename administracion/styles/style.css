@@ -8,11 +8,11 @@ html, body{
     font-family: 'Montserrat Alternates', sans-serif;
   }
 .banner{
-    background-color: #0c0426;
+    background-color: #C8611F;
     height: 100%;
 }
 .banner2{
-    background-image: url(../../img/svg/bg-gradient-main.png);
+    background-image: url(../../img/svg/banner3.0.png);
     background-size:cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -27,13 +27,13 @@ html, body{
     display: flex;
     text-align:start;
     font-family: 'Hind Madurai', sans-serif;
-    color: #00f0ff;
+    color: #fff;
 }
 .inicio2{
     margin-top: 3em;
     display: flex;
     text-align:start;
-    color: #00f0ff;
+    color: #fff;
     font-size: small;
 }
 
@@ -53,7 +53,7 @@ html, body{
     width: 100%;
     line-height: 28px;
     border: 2px solid transparent;
-    border-bottom-color: #00f0ff;
+    border-bottom-color: #fff;
     padding: .2rem 0;
     outline: none;
     background-color: transparent;
@@ -65,11 +65,11 @@ html, body{
     outline: none;
     padding: .2rem 1rem;
     border-radius: 1rem;
-    border-color: #00f0ff;
+    border-color: #fff;
    }
 
    .input::placeholder {
-    color: #00f0ff;
+    color: #fff;
    }
 
    .input:focus::placeholder {
@@ -83,7 +83,7 @@ html, body{
    }
 
    .passwordreset a{
-    color: #00f0ff;
+    color: #fff;
     text-decoration: none;
    }
 
@@ -116,7 +116,7 @@ html, body{
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #00f0ff;
+    stroke: #fff;
     stroke-width: 1.5;
     transform: translate3d(0, 0, 0);
     transition: all 0.2s ease;
@@ -163,7 +163,7 @@ html, body{
     margin: auto;
     padding: 1em 2.5em 1em 2.5em;
     border: none;
-    background: #00f0ff;
+    background: #fff;
     transition: all 0.1s linear;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
    }

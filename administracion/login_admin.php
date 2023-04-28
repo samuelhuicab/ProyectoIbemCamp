@@ -56,10 +56,29 @@ if ($cerrar_session) {
                             </button>
                         </div>
                     </form>
+                    <div class="passwordreset">
+                        <div>
+                            <a href="../index.php">Regresar Página Principal</a>
+                        </div>
+                    </div>
                 </div>
               </div>
         </div>
         <div class="col-7 banner2">
+            <div class="row">
+                <div class="col-6">
+
+                </div>
+                <div class="col-4" style="margin-left:8em;">
+                    <div class="botoniniciar">
+                        <a href="login.php">
+                            <button class="full-rounded">
+                                <span>Regresar</span>
+                            </button>
+                        </a> 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>          
     

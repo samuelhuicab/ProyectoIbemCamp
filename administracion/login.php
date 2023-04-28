@@ -30,9 +30,9 @@ if ($cerrar_session) {
         <div class="col-5 banner">
             <nav class="navbar">
                 <div class="container">
-                  <a class="navbar-brand" href="login_admin.php">
+                  <!-- <a class="navbar-brand" href="login_admin.php">
                     <p>Ingresar Admin</p>
-                  </a>
+                  </a> -->
                 </div>
               </nav>
               <div class="contenedorlogin">
@@ -57,10 +57,29 @@ if ($cerrar_session) {
                             </button>
                         </div>
                     </form>
+                    <div class="passwordreset">
+                        <div>
+                            <a href="../index.php">Regresar Página Principal</a>
+                        </div>
+                    </div>
                 </div>
               </div>
         </div>
         <div class="col-7 banner2">
+            <div class="row">
+                <div class="col-6">
+
+                </div>
+                <div class="col-4" style="margin-left:8em; font-size: x-small;">
+                    <div class="botoniniciar">
+                        <a href="login_admin.php">
+                            <button class="full-rounded">
+                                <span>Ir inicio sesión admin</span>
+                            </button>
+                        </a> 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>          
     
