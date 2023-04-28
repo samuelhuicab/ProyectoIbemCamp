@@ -385,17 +385,17 @@
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/bloqueador.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Bloqueador</h4>
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/repelente.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Repelente</h4>
                   </div>
                   <!-- feature item -->
                   <div class="col-12 col-md-4 features__item">
-                    <img src="https://dummyimage.com/70x70/4f4f57/1f1e21" class="features__image" alt="Oomph Feature Icon">
+                    <img src="img/imgibem/shampoo.png" class="features__image" alt="Oomph Feature Icon">
                     <h4 class="features__title light">Shampoo</h4>
                   </div>
                 </div>

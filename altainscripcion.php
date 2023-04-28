@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("Negocios/Clases/clsGenericas.php");
 
 if (isset($_POST['register'])) {
@@ -55,7 +55,7 @@ if (isset($_POST['register'])) {
               $stmt->close();
             }else{
               $respuesta = array(
-                'respuesta' => 'TokenValido',             
+                'respuesta' => 'TokenValido',
               );
             }
           }else{
@@ -75,7 +75,7 @@ if (isset($_POST['register'])) {
           if ($id_registro > 0) {
           $oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
           $respuesta = array(
-            'respuesta' => 'exito',             
+            'respuesta' => 'exito',
           );
           }else {
           $respuesta = array(
@@ -92,7 +92,7 @@ if (isset($_POST['register'])) {
           if ($stmt->affected_rows) {
           $oclsGenericas->m_enviarCorreo($sContrasena, $nombre,$email);
           $respuesta = array(
-            'respuesta' => 'exito',             
+            'respuesta' => 'exito',
           );
           }else {
           $respuesta = array(
@@ -105,12 +105,12 @@ if (isset($_POST['register'])) {
       } catch (\Exception $e) {
         echo "error ".$e->getMessage();
       }
-  
+
     die(json_encode($respuesta));
-  
-  
-  
-  
+
+
+
+
    }
 
 //    function creapdf($nombre,$email,$telefono){
