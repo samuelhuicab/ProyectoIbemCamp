@@ -258,9 +258,9 @@
                 <!-- video background -->
                 <div class="video-background">
                   <video id="main-video" preload="metadata" autoplay="autoplay" loop="loop" muted="muted" poster="https://dummyimage.com/1080x1440/1f1e21/4f4f57">
-                    <source type="video/mp4" src="video/video.mp4">
-                    <source type="video/webm" src="video/video.webm">
-                    <source type="video/ogv" src="video/video.ogv">
+                    <source type="video/mp4" src="video/videoC1.mp4">
+                    <source type="video/webm" src="video/videoC1.webm">
+                    <source type="video/ogv" src="video/videoC1.ogv">
                   </video>
                 </div>
                 <!-- Background Effects End -->
