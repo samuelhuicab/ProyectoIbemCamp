@@ -35,9 +35,10 @@
                     </html>'
                     ";
                     if(mail($para, $titulo, $mensaje,$cabeceras)){
-                        echo "Email sent";
+                        // echo "Email sent";
+                        // echo $para;
                     }else{
-                        echo "Fallo";
+                        // echo "Fallo";
                     }
         }
     }
