@@ -363,7 +363,7 @@ $(function() {
   // --------------------------------------------- //
   // KBW-Countdown Start
   // --------------------------------------------- //
-  $('#countdown').countdown({until: $.countdown.UTCDate(-5, 2023, 7, 20), format: 'D'});
+  $('#countdown').countdown({until: $.countdown.UTCDate(-5, 2023, 6, 20), format: 'D'});
   $('#countdown-large').countdown({until: $.countdown.UTCDate(+10, 2023, 2, 17), format: 'DHMS'});
   // --------------------------------------------- //
   // KBW-Countdown End
