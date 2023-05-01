@@ -1,3 +1,4 @@
+<?php include_once 'include/funciones/sessiones.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,6 @@
 </head>
 <body>
     <div class="main-wrapper">
-    <?php include_once 'include/funciones/sessiones.php'; ?>
     <?php include_once 'include/templates/navbaradmin.php'; ?>  
       
         <div class="content-body">
