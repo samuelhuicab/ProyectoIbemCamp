@@ -42,7 +42,7 @@ if ($cerrar_session) {
                             <h3>Inicia Sesión</h3>
                         </div>
                     </div>
-                    <form role="form" name="login-admin" id="login-admin" method="post" action="Include/Funciones/acciones.php">
+                    <form role="form" name="login-admin" id="login-admin" method="post" action="include/funciones/acciones.php">
                         <div class="iniciosesion">   
                             <input placeholder="Usuario" name="user" type="text" class="input" required="">
                         </div>

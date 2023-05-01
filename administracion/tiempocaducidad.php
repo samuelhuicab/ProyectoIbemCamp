@@ -61,7 +61,7 @@
 
                     <div class="add-edit-product-wrap col-12">
                             <div class="add-edit-product-form">
-                                <form name="save-confdias" id="save-confdias" method="post" action="Include/Funciones/acciones.php">
+                                <form name="save-confdias" id="save-confdias" method="post" action="include/funciones/acciones.php">
                                     <h4 class="title">Tiempo Caducidad en Días</h4>
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mb-30"><input class="form-control" name="dias" type="text" value="<?php echo $days['diasCaducidad']?>" required=""></div>

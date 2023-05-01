@@ -49,7 +49,7 @@
                         <!-- Add or Edit Product Start -->
                         <div class="add-edit-product-wrap col-12">
                             <div class="add-edit-product-form">
-                                <form name="save-admin" id="save-admin" method="post" action="Include/Funciones/acciones.php">
+                                <form name="save-admin" id="save-admin" method="post" action="include/funciones/acciones.php">
                                     <h4 class="title">Formulario Alta</h4>
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mb-30"><input class="form-control" name="nombreuser" type="text" placeholder="Nombre*" required=""></div>
