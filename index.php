@@ -144,7 +144,7 @@
                 </p>
                 <div class="headline__btnholder loading-el loading-el-4">
                   <a href="Inscripciones.php#live-preview" class="btn btn-solid">
-                    <span class="btn-caption" style="color: #f5f3f3;">Pre Inscribirme</span>
+                    <span class="btn-caption" style="color: #f5f3f3;">Inscribirme</span>
                   </a>
                   <a href="administracion/login.php" class="btn btn-solid">
                     <span class="btn-caption" style="color: #f5f3f3;">Ingresar</span>
@@ -308,42 +308,46 @@
               <!-- Section Container - Section Title Start -->
               <div class="inner__container">
                 <h2>Información</h2>
-                <span class="section__subtitle">Importante</span>
-                <p class="section__text">Bienvenido a la sección de información esencial, donde encontrarás todo lo que necesitas saber.
-                  Horarios, lugar, precio, etc.
+                <span class="section__subtitle">Fechas que será el campamento</span>
+                <p class="section__text">Las fechas oficiales del campamento "Blindados" son del: 20 Julio 2023 al 23 Julio 2023
+                </p>
+                <span class="section__subtitle">¿Quiénes pueden inscribirse?</span>
+                <p class="section__text">Pueden inscribirse jóvenes que sean mayores de trece años o que cumplan trece en el mes de julio
+                </p>
+                <h2>Pago</h2>
+                <span class="section__subtitle">¿Qué costo tendrá el campamento?</span>
+                <p class="section__text">El costo por persona del campamento será de $600.
+                <span class="section__subtitle">Precio del transporte</span>
+                <p class="section__text">El transporte tendrá un costo de $150
+                </p>
+                <h2>Método de pago</h2>
+                <p class="section__text">Puedes realizar tu pago con alguno de los organizadores.
+                </p>
+                <p class="section__text">Transferencias al número de cuenta:
+                </p>
+                <span class="section__subtitle">Bancomer</span>
+                <span class="section__subtitle">4152 3134 5431 3870</span>
+                <span class="section__subtitle">Concepto: CAMPAMENTO 2023</span>
+                <p class="section__text">Si realizas tranferencia toma una captura de panatalla ya que te servirá al
+                  momento de tu registro en línea.
+                </p>
+                <h2>Contacto</h2>
+                <span class="section__subtitle">¿Dudas? Comunicate con nosotros.</span>
+                <p class="section__text">Daniel Novelo 9999703392
+                </p>
+                <p class="section__text">Priscila Villanueva 9992688745
+                </p>
+                <p class="section__text">Vianey Novelo 9997483914
+                </p>
+                <p class="section__text">Pastor Víctor Villanueva 9993513339
+                </p>
+                <p class="section__text">Descarga el pdf donde viene toda la Información que necesitas saber. <a href="administracion/comprobantes/blindados.pdf" target="_blank" >Descarga aqui</a>
                 </p>
               </div>
               <!-- Section Container - Section Title End -->
 
             </div>
             <!-- Section Content Block End -->
-
-            <!-- Section Content Block Start -->
-            <div class="inner__block bg-dark">
-
-              <!-- Section Container - Features Start -->
-              <div class="inner__container">
-              <h2 style="color:white; margin-bottom:0.5em;">Fechas</h2>
-              <span style="color:white; " class="section__subtitle">¿Qué días será el campamento?</span>
-              <p style="color:white;" class="section__text">La fecha programada para el campamento "Blindados" son del 20/07/2023 al 23/07/2023.
-              </p>
-              <span style="color:white;" class="section__subtitle">¿Cuándo puedo empezar a Inscribirme?</span>
-              <p style="color:white;" class="section__text">Si estas viendo esta pagina ya puedes inscribirte.
-              </p>
-              </div>
-              <!-- Section Container - Features End -->
-
-            </div>
-            <!-- Section Content Block End -->
-            <div class="inner__block bg-medium">
-              <div class="inner__container">
-                <h2>Lugar</h2>
-                <span class="section__subtitle"></span>
-                <p class="section__text">Nuestro campamento será en "". Para saber la ubicación del evento presione <a href="https://goo.gl/maps/9WqTJCeXcQi4fWvu8">Aqui</a>
-                </p>
-              </div>
-            </div>
-            <!-- Section Content Block Start -->
 
             <div class="inner__block bg-dark">
               <div class="inner__container grid-block">
