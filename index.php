@@ -140,7 +140,7 @@
                   </span>
                   <span id="typed"></span>
                 </h1>
-                <p class="headline__text light loading-el loading-el-3">¡Hola! ¡Bienvenidos al campamento Blindados! Donde encontrarás una experiencia emocionante y llena de desafíos que te ayudarán a crecer y a prepararte para enfrentar situación en la vida.
+                <p class="headline__text light loading-el loading-el-3">¡Hola! ¡Bienvenidos al campamento Blindados! Donde encontrarás una experiencia emocionante y llena de desafíos que te ayudarán a crecer y a prepararte para enfrentar adversidades en la vida.
                 </p>
                 <div class="headline__btnholder loading-el loading-el-4">
                   <a href="Inscripciones.php#live-preview" class="btn btn-solid">
