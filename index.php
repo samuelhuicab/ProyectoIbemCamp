@@ -93,7 +93,7 @@
 
     <!-- Rotate Object Start -->
     <div class="rotate-object">
-      <a href="https://youtu.be/GOu6fWmMBt4" id="showreel-trigger" class="showreel-trigger">
+      <a href="https://www.youtube.com/watch?v=GOu6fWmMBt4" id="showreel-trigger" class="showreel-trigger">
         <img src="img/svg/showreel-trigger.svg" alt="Oomph - Coming Soon & Landing Page Template">
       </a>
     </div>
