@@ -5333,10 +5333,6 @@ table.data-table thead tr th.sorting:after {
 table.data-table tbody tr td {
   white-space: nowrap;
 }
-table.data-table.collapsed {
-  /* Table Head */
-  /* Table Body */
-}
 table.data-table.collapsed tbody tr td.sorting_1 {
   position: relative;
   padding-left: 30px;
@@ -9324,11 +9320,6 @@ body.side-header-green .side-header .side-header-close {
   }
 }
 
-/*Single Mail*/
-.single-mail {
-  /*Top*/
-  /*Bottom*/
-}
 .single-mail .top {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11046,9 +11037,6 @@ body.skin-dark .top-report .content h2 {
 body.skin-dark .top-report .footer .progess {
   background-color: #202334;
 }
-body.skin-dark .top-report.top-report-2 {
-  /*-- Content --*/
-}
 body.skin-dark .top-report.top-report-2 .content h2 {
   color: #ffffff;
 }
@@ -11144,9 +11132,6 @@ body.skin-dark .mail-list .mail .right button:hover {
 }
 body.skin-dark .mail-list .mail .right button.mail-button-delete:hover {
   color: #fd427c;
-}
-body.skin-dark .single-mail {
-  /*Top*/
 }
 body.skin-dark .single-mail .top {
   border-color: #292d44;
@@ -11847,12 +11832,6 @@ body.skin-dark .cus-radio.light .icon::before {
 /*----------------------------------------*/
 /*  22. RTL Version CSS
 /*----------------------------------------*/
-[dir=rtl] {
-  /*-- Side Header Menu --*/
-  /*-- Sub Menu --*/
-  /*Chat*/
-  /*Chat Submission*/
-}
 [dir=rtl] .page-heading h3 span {
   margin-left: 0;
   margin-right: 5px;
@@ -12531,9 +12510,6 @@ body.skin-dark .cus-radio.light .icon::before {
 [dir=rtl] .smart-wizard .sw-toolbar .sw-btn-group .btn:last-child {
   margin-left: 0 !important;
 }
-[dir=rtl] .top-report {
-  /*-- Icon --*/
-}
 [dir=rtl] .top-report .icon {
   left: 0;
   right: auto;
@@ -12793,14 +12769,6 @@ body.skin-dark .cus-radio.light .icon::before {
     margin-left: 15px;
     margin-right: 0;
   }
-}
-[dir=rtl] .single-mail {
-  /*Top*/
-  /*Bottom*/
-}
-[dir=rtl] .single-mail .top {
-  /*Left*/
-  /*Right*/
 }
 [dir=rtl] .single-mail .top .left ul li strong {
   margin-left: 50px;
