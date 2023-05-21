@@ -10800,6 +10800,7 @@ body.side-header-green .side-header .side-header-close {
 }
 .error-wrap .error-content, .error-wrap-2 .error-content {
   text-align: center;
+  margin-left: 40em;
 }
 .error-wrap .error-content .title, .error-wrap-2 .error-content .title {
   font-weight: 700;
@@ -10823,6 +10824,10 @@ body.side-header-green .side-header .side-header-close {
   }
   .error-wrap .error-content h4, .error-wrap-2 .error-content h4 {
     font-size: 16px;
+  }
+  .error-wrap .error-content, .error-wrap-2 .error-content {
+    text-align: center;
+    margin-left: 0em;
   }
 }
 @media only screen and (max-width: 479px) {

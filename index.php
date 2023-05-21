@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/colors/color-1.css">
+    <link href="css/whatsapp.css" rel="stylesheet">
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
@@ -92,7 +93,7 @@
 
     <!-- Rotate Object Start -->
     <div class="rotate-object">
-      <a href="https://www.youtube.com/watch?v=Xl_ubyCePlI" id="showreel-trigger" class="showreel-trigger">
+      <a href="https://youtu.be/GOu6fWmMBt4" id="showreel-trigger" class="showreel-trigger">
         <img src="img/svg/showreel-trigger.svg" alt="Oomph - Coming Soon & Landing Page Template">
       </a>
     </div>
@@ -100,6 +101,10 @@
 
 
     <!-- Main Section Start -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+529999703392&text=Hola, vengo de la página del campamento, tengo unas dudas, ¿me puedes ayudar a resolverlas?" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float "></i>
+    </a>
     <section id="main" class="main">
       <div class="container-fluid p-0 fullheight">
         <div class="row g-0 fullheight">

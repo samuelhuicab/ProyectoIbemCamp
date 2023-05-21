@@ -96,7 +96,7 @@
                                                     <div class="table-action-buttons">
                                                         <input type="hidden" name="validacion-b-correcta" value="1">
                                                         <input type="hidden" name="usuarioID" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
-                                                        <button class="edit button button-box button-xs button-success"><i class="ti-check"></i></button>
+                                                        <button type="submit" name="validacion-b-correcta" class="edit button button-box button-xs button-success"><i class="ti-check"></i></button>
                                                     </div>
                                                 </form>
                                             </td>
@@ -105,7 +105,7 @@
                                                     <div class="table-action-buttons">
                                                         <input type="hidden" name="validacion-b-incorrecta" value="1">
                                                         <input type="hidden" name="usuarioID2" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
-                                                        <button class="delete button button-box button-xs button-danger"><i class="ti-close"></i></button>
+                                                        <button type="submit" name="validacion-b-incorrecta" class="delete button button-box button-xs button-danger"><i class="ti-close"></i></button>
                                                     </div>
                                                 </form>
                                             </td>

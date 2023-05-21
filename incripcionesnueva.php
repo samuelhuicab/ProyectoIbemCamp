@@ -2,12 +2,6 @@
 include("Negocios/Clases/clsGenericas.php");
 
 if (isset($_POST['enviar'])){
-    $file_name = $_FILES['file']['name'];
-    $file_tmp = $_FILES['file']['tmp_name'];
-    $nombrecomprobante = "ComprobantePago".$nombre."(".$apodo.")"."".$file_name;
-    $status = "A";
-    $route = "administracion/comprobantes/".$nombrecomprobante;
-
     $pregunta_1 = $_POST['pregunta_1'];
     $deporte = $_POST['deporte'];
     $deporte_practica = $_POST['deporte_practica'];
@@ -24,6 +18,13 @@ if (isset($_POST['enviar'])){
     $email = $_POST['email'];
     $nacimiento = $_POST['nacimiento'];
     $apodo = $_POST['apodo'];
+    $importe = $_POST['importe'];
+
+    $file_name = $_FILES['file']['name'];
+    $file_tmp = $_FILES['file']['tmp_name'];
+    $nombrecomprobante = "ComprobantePago".$nombre."(".$apodo.")"."".$file_name;
+    $status = "A";
+    $route = "administracion/comprobantes/".$nombrecomprobante;
 
     $status = "A";
     $vacio = "";
@@ -44,7 +45,7 @@ if (isset($_POST['enviar'])){
         $resultado = $caducidadDias->fetch_assoc();
 
         if($resultado['Email'] > 0){
-            header("Location: inscripciones.php");
+            header("Location: administracion/mensajescuestionario/errorcorreo.php");
             exit;
         }
 
@@ -63,8 +64,8 @@ if (isset($_POST['enviar'])){
 
         if ($insertacomprobante){
             move_uploaded_file($file_tmp,$route);
-            $stmt = $conn->prepare("INSERT INTO usuarioscomprobante(usuarioPreInscritoID,descripcionArchivo,nombreArchivo,rutaArchivo,estatus) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss",$id_registrousuarios, $nombrecomprobante, $file_name, $route, $status);
+            $stmt = $conn->prepare("INSERT INTO usuarioscomprobante(usuarioPreInscritoID,descripcionArchivo,nombreArchivo,rutaArchivo,estatus,montoPagado) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssssi",$id_registrousuarios, $nombrecomprobante, $file_name, $route, $status, $importe);
             $stmt->execute();
             $id_registroComprobante = $stmt->insert_id;
             if ($id_registroComprobante > 0) {
@@ -95,7 +96,7 @@ if (isset($_POST['enviar'])){
                 if($registrocorrecto){
                     $stmt->close();
                     $conn->close();
-                    header("Location: index.php");
+                    header("Location: administracion/mensajescuestionario/correcto.php?U=$email&P=$sContrasena");
                     exit;
                 }else{
                     $stmt->close();
