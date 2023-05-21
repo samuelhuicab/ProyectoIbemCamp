@@ -49,7 +49,6 @@
             <div class="container-fluid">
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="tab_1">
-                        <div class="subheader" id="quote"></div>
                         <div class="row">
                             <aside class="col-xl-3 col-lg-4">
                                 <h2>Responde este cuestionario</h2>
@@ -57,125 +56,200 @@
                                 <ul class="list_ok">
                                     <li>Dedica un tiempo para responder este cuestionario</li>
                                     <li>Sé 100% sincero con tus respuestas para tener equipos más equilibrados.</li>
+                                    <li>Para poderte registrar ya debiste haber pagado o abonado para el campamento</li>
                                 </ul>
                             </aside>
 
                             <div class="col-xl-9 col-lg-8">
                                 <div id="wizard_container">
                                     <div id="top-wizard">
-                                        <strong>Progress</strong>
+                                        <strong>Progreso</strong>
                                         <div id="progressbar"></div>
                                     </div><!-- /top-wizard -->
 
-                                    <form name="formsquad" id="formsquad" method="post" action="altainscripcion.php">
+                                    <form role="form" name="formregistronuevo" id="formregistronuevo" method="post" enctype="multipart/form-data" action="../incripcionesnueva.php">
                                         <input id="website" name="website" type="text" value=""><!-- Leave for security protection, read docs for details -->
                                         <div id="middle-wizard">
                                             <div class="step">
-                                                <h3 class="main_question"><strong>1/5</strong>¿Cómo consideras tu habilidad atletica?</h3>
+                                                <h3 class="main_question"><strong>1/7</strong>Ingresa tu comprobante</h3>
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <div class="fileupload">
+                                                            <input type="file" name="file" id="file" class="required form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <h3 class="main_question"><strong>2/7</strong>¿Cómo consideras tu habilidad atletica?</h3>
 
                                                 <div class="form-group radio_questions">
                                                     <label>Muy buena
-                                                        <input name="question_1" type="radio" value="Muy buena" class="icheck required">
+                                                        <input name="pregunta_1" type="radio" value="Muy buena" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Buena
-                                                        <input name="question_1" type="radio" value="Buena" class="icheck required">
+                                                        <input name="pregunta_1" type="radio" value="Buena" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Ni malo ni bueno
-                                                        <input name="question_1" type="radio" value="Ni malo ni bueno" class="icheck required">
+                                                        <input name="pregunta_1" type="radio" value="Ni malo ni bueno" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Malo
-                                                        <input name="question_1" type="radio" value="Malo" class="icheck required">
+                                                        <input name="pregunta_1" type="radio" value="Malo" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Muy malo
-                                                        <input name="question_1" type="radio" value="Muy malo" class="icheck required">
+                                                        <input name="pregunta_1" type="radio" value="Muy malo" class="icheck required">
                                                     </label>
                                                 </div>
 
                                             </div><!-- /step 1-->
 
                                             <div class="step">
-                                                <h3 class="main_question"><strong>2/5</strong>¿Practicas algún deporte? si es sí, escribe cúal es</h3>
+                                                <h3 class="main_question"><strong>3/7</strong>¿Practicas algún deporte? si es sí, escribe cúal es</h3>
+                                                <div class="styled-select">
+                                                        <select class="required" name="deporte">
+                                                            <option value="" selected>--Seleccione--</option>
+                                                            <option value="si">Si</option>
+                                                            <option value="no">No</option>
+                                                        </select>
+                                                </div>
                                                 <div class="form-group textarea_info">
-                                                    <textarea name="addtional_info" class="form-control required" style="height:150px;" placeholder=""></textarea>
+                                                    <textarea name="deporte_practica" class="form-control" style="height:150px;" placeholder=""></textarea>
                                                 </div>
                                             </div><!-- /step 2-->
 
                                             <div class="step">
-                                                <h3 class="main_question"><strong>3/5</strong>¿Cómo te consideras en conocimiento bíblico?</h3>
+                                                <h3 class="main_question"><strong>4/7</strong>¿Te consideras bueno en algún arte?</h3>
+                                                <div class="styled-select">
+                                                        <select class="required" name="arte">
+                                                            <option value="" selected>--Seleccione--</option>
+                                                            <option value="si">Si</option>
+                                                            <option value="no">No</option>
+                                                        </select>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group textarea_info">
+                                                        <textarea name="arte_practica" class="form-control" style="height:150px;" placeholder="como canto, actuación, dibujo, etc."></textarea>
+                                                    </div>
+                                                </div><!-- /row -->
+                                            </div>
+
+                                            <div class="step">
+                                                <h3 class="main_question"><strong>5/7</strong>¿Cómo te consideras en conocimiento bíblico?</h3>
 
                                                 <div class="form-group radio_questions">
                                                     <label>Muy bueno
-                                                        <input name="question_1" type="radio" value="Muy buena" class="icheck required">
+                                                        <input name="pregunta_5" type="radio" value="Muy buena" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Bueno
-                                                        <input name="question_1" type="radio" value="Buena" class="icheck required">
+                                                        <input name="pregunta_5" type="radio" value="Buena" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Ni malo ni bueno
-                                                        <input name="question_1" type="radio" value="Ni malo ni bueno" class="icheck required">
+                                                        <input name="pregunta_5" type="radio" value="Ni malo ni bueno" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Malo
-                                                        <input name="question_1" type="radio" value="Malo" class="icheck required">
+                                                        <input name="pregunta_5" type="radio" value="Malo" class="icheck required">
                                                     </label>
                                                 </div>
                                                 <div class="form-group radio_questions">
                                                     <label>Muy malo
-                                                        <input name="question_1" type="radio" value="Muy malo" class="icheck required">
+                                                        <input name="pregunta_5" type="radio" value="Muy malo" class="icheck required">
                                                     </label>
                                                 </div>
 
                                             </div><!-- /step 1-->
 
                                             <div class="step">
-                                                <h3 class="main_question"><strong>4/5</strong>Constesta estás últimas preguntas</h3>
+                                                <h3 class="main_question"><strong>6/7</strong>Constesta</h3>
                                                 <div class="form-group">
                                                 <label>Consideras que los demás te ven como un líder.</label>
                                                     <div class="styled-select">
-                                                        <select class="required" name="country">
+                                                        <select class="required" name="lider">
                                                             <option value="" selected>--Seleccione--</option>
-                                                            <option value="Europe">Si</option>
-                                                            <option value="Asia">No</option>
+                                                            <option value="si">Si</option>
+                                                            <option value="no">No</option>
                                                         </select>
                                                     </div>
                                                 <label>Anteriormente asististe a un campamento juvenil</label>
                                                     <div class="styled-select">
-                                                        <select class="required" name="country">
+                                                        <select class="required" name="anteriorasis">
                                                             <option value="" selected>--Seleccione--</option>
-                                                            <option value="Europe">Si</option>
-                                                            <option value="Asia">No</option>
+                                                            <option value="si">Si</option>
+                                                            <option value="no">No</option>
                                                         </select>
+                                                    </div>
+                                                <label>¿Asistes a alguna Iglesia?</label>
+                                                    <div class="styled-select">
+                                                        <select class="required" name="iglesia">
+                                                            <option value="" selected>--Seleccione--</option>
+                                                            <option value="si">Si</option>
+                                                            <option value="no">No</option>
+                                                        </select>
+                                                    </div>
+                                                    <label>Si tu respuesta es si, indica a qué iglesia asistes.</label>
+                                                    <div class="form-group textarea_info">
+                                                        <textarea name="iglesia_asistencia" class="form-control" style="height:150px;" placeholder=""></textarea>
+                                                    </div>
+                                                    <label>¿Sufres alguna alergia?</label>
+                                                    <div class="styled-select">
+                                                        <select class="required" name="alergia">
+                                                            <option value="" selected>--Seleccione--</option>
+                                                            <option value="si">Si</option>
+                                                            <option value="no">No</option>
+                                                        </select>
+                                                    </div>
+                                                    <label>Si tu respuesta es si, indica a qué.</label>
+                                                    <div class="form-group textarea_info">
+                                                        <textarea name="alergia_sufre" class="form-control" style="height:150px;" placeholder=""></textarea>
+                                                    </div>
+                                                    <label>Mencionanos cómo es que te gusta que te digan.</label>
+                                                    <div class="form-group textarea_info">
+                                                        <textarea name="apodo" class="form-control" style="height:150px;" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div><!-- /step 2-->
 
 
                                             <div class="submit step">
-
-                                                <h3 class="main_question"><strong>5/5</strong>¿Te consideras bueno en algún arte?</h3>
+                                                <h3 class="main_question"><strong>7/7</strong>Ya estamos por finalizar</h3>
 
                                                 <div class="row">
-                                                    <div class="form-group textarea_info">
-                                                        <textarea name="addtional_info" class="form-control required" style="height:150px;" placeholder="como canto, actuación, dibujo, etc."></textarea>
+
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="nombre" class="required form-control" placeholder="Nombre completo">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="number" name="telefono" class="required form-control" placeholder="Número telefonico">
+                                                        </div>
+                                                    </div><!-- /col-sm-6 -->
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" class="required form-control" placeholder="Email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="date" name="nacimiento" step="1" max="2010-07-19" value="2010-07-19" class="required form-control" placeholder="Fecha de nacimiento">
+                                                        </div>
                                                     </div>
                                                 </div><!-- /row -->
-
                                                 <div class="form-group checkbox_questions">
                                                     <input name="terms" type="checkbox" class="icheck required" value="yes">
                                                     <label>Please accept <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">terms and conditions</a> ?
                                                     </label>
+                                                    <input name="enviar" type="hidden" value="1">
                                                 </div>
 
                                             </div><!-- /step 4-->
@@ -184,7 +258,7 @@
                                         <div id="bottom-wizard">
                                             <button type="button" name="backward" class="backward">Atras </button>
                                             <button type="button" name="forward" class="forward">Siguiente</button>
-                                            <button type="submit" name="process" class="submit">Submit</button>
+                                            <button type="submit" name="enviar" class="submit">Enviar</button>
                                         </div><!-- /bottom-wizard -->
                                     </form>
                                 </div><!-- /Wizard container -->
@@ -192,231 +266,6 @@
                             </div><!-- /col -->
                         </div><!-- /row -->
                         </div><!-- /TAB 1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-                    <div class="tab-pane fade" id="tab_2">
-                       <div class="subheader" id="about"></div>
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <h2>Welcome to Quote</h2>
-                                <p class="lead">An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix. Mei eu scripta dolorum voluptatibus, id omnes repudiare pri.</p>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="box_feat" id="icon_1">
-                                            <span></span>
-                                            <h3>Responsive site design</h3>
-                                            <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="box_feat" id="icon_2">
-                                            <span></span>
-                                            <h3>Web site check</h3>
-                                            <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
-                                        </div>
-                                    </div>
-                                    </div><!-- /row -->
-                                    <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="box_feat" id="icon_3">
-                                            <h3>Email campaigns</h3>
-                                            <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="box_feat" id="icon_4">
-                                            <h3>Seo optimization</h3>
-                                            <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- /row -->
-                                  <hr>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="about_info">
-                                                <i class="pe-7s-news-paper"></i>
-                                                <h4>A brief about Quote<span>Suas summo id sed, erat erant oporteat cu pri.</span></h4>
-                                                <p>Cum iusto nonumes dignissim ad, movet vocent ceteros nec ut. Eu putent utroque ius, ei usu purto doctus, ludus nostrud consectetuer ex pri. Maiorum petentium similique duo id. Sea ex nostro offendit, ius sumo electram theophrastus et. Nam eu dolore aliquid laoreet, ei eos tacimates assueverit inciderint. His deserunt recteque consequat in. Vis mucius virtute consequat ad, suavitate interesset an mei, oporteat temporibus at sea.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about_info">
-                                                <i class="pe-7s-light"></i>
-                                                <h4>Mission<span>Suas summo id sed, erat erant oporteat cu pri.</span></h4>
-                                                <p>Cum iusto nonumes dignissim ad, movet vocent ceteros nec ut. Eu putent utroque ius, ei usu purto doctus, ludus nostrud consectetuer ex pri. Maiorum petentium similique duo id. Sea ex nostro offendit, ius sumo electram theophrastus et. Nam eu dolore aliquid laoreet, ei eos tacimates assueverit inciderint. His deserunt recteque consequat in. Vis mucius virtute consequat ad, suavitate interesset an mei, oporteat temporibus at sea.</p>
-                                            </div>
-                                        </div>
-                                    </div><!-- /row -->
-                            </div><!-- /col -->
-
-                            <aside class="col-lg-4">
-                                <div class="more_padding_left">
-                                    <div class="widget" id="review">
-                                        <h4>reviews</h4>
-                                        <div class="owl-carousel owl-theme add_bottom_30">
-                                            <div class="item">
-                                                <blockquote class="testimonial">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat.
-                                                    </p>
-                                                </blockquote>
-                                                <div class="testimonial-arrow-down">
-                                                </div>
-                                                <div class="testimonial-author">
-                                                    <div class="img-thumbnail img-thumbnail-small">
-                                                        <img src="img/avatar1.jpg" alt="">
-                                                    </div>
-                                                    <p>
-                                                        <strong>Mark Smith</strong><span>October 2016</span>
-                                                    </p>
-                                                </div>
-                                            </div><!-- /item -->
-                                            <div class="item">
-                                                <blockquote class="testimonial">
-                                                    <p>
-                                                        Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat.
-                                                    </p>
-                                                </blockquote>
-                                                <div class="testimonial-arrow-down">
-                                                </div>
-                                                <div class="testimonial-author">
-                                                    <div class="img-thumbnail img-thumbnail-small">
-                                                        <img src="img/avatar2.jpg" alt="">
-                                                    </div>
-                                                    <p>
-                                                        <strong>Mark Smith</strong><span>September 2016</span>
-                                                    </p>
-                                                </div>
-                                            </div><!-- /item -->
-                                            <div class="item">
-                                                <blockquote class="testimonial">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat.
-                                                    </p>
-                                                </blockquote>
-                                                <div class="testimonial-arrow-down">
-                                                </div>
-                                                <div class="testimonial-author">
-                                                    <div class="img-thumbnail img-thumbnail-small">
-                                                        <img src="img/avatar3.jpg" alt="">
-                                                    </div>
-                                                    <p>
-                                                        <strong>Mark Smith</strong><span>July 2016</span>
-                                                    </p>
-                                                </div>
-                                            </div><!-- /item -->
-                                        </div><!-- /carousel -->
-                                    </div><!-- /reviews -->
-                                    <div class="widget" id="gallery">
-                                        <h4>gallery</h4>
-                                        <ul class="magnific-gallery">
-                                            <li>
-                                                <a href="img/gallery/large_1.jpg" title="image title">
-                                                    <figure><img src="img/gallery/thumb_1.jpg" alt="thumb"></figure>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="img/gallery//large_2.jpg" title="image title">
-                                                    <figure><img src="img/gallery/thumb_2.jpg" alt="thumb"></figure>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="img/gallery/large_3.jpg" title="image title">
-                                                    <figure><img src="img/gallery/thumb_3.jpg" alt="thumb"></figure>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="img/gallery/large_4.jpg" title="image title">
-                                                    <figure><img src="img/gallery/thumb_2.jpg" alt="thumb"></figure>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="img/gallery/large_5.jpg" title="image title">
-                                                    <figure><img src="img/gallery/thumb_3.jpg" alt="thumb"></figure>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div><!-- /gallery -->
-                                     <div class="widget" id="follow">
-                                        <h4>follow us</h4>
-                                        <ul>
-                                            <li><a href="#"><i class="icon-facebook"></i>Facebook</a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i>Twitter</a></li>
-                                            <li><a href="#"><i class="icon-google"></i>Google plus</a></li>
-                                            <li><a href="#"><i class="icon-instagram"></i>Instagram</a></li>
-                                        </ul>
-                                    </div><!-- /follow -->
-                                </div><!-- /more padding left -->
-                            </aside>
-                        </div><!-- /row -->
-                    </div><!-- /TAB 2:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-                    <div class="tab-pane fade" id="tab_3">
-
-                        <div id="map_contact"></div><!-- /map -->
-
-                        <div id="contact_info">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="box_contact">
-                                        <i class="pe-7s-map-marker"></i>
-                                        <h4>Address</h4>
-                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
-                                        <p>11 Fifth Ave - New York, 45 001238 - USA</p>
-										<a href="https://www.google.com/maps/dir//11+5th+Ave,+New+York,+NY+10003,+Stati+Uniti/@40.7322935,-73.9981148,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c25990b3af8bb9:0x854ae1d3553155!2m2!1d-73.9959261!2d40.7322935!3e0" class="btn_1" target="_blank">Get directions</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="box_contact">
-                                        <i class="pe-7s-mail-open-file"></i>
-                                        <h4>Email and website</h4>
-                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
-                                        <p>
-                                            <strong>Email:</strong> <a href="#0">support@domain.com</a><br>
-                                            <strong>Website:</strong> <a href="#0">www.quote.com</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="box_contact">
-                                        <i class="pe-7s-call"></i>
-                                        <h4>Telephone</h4>
-                                        <p>Duo magna vocibus electram ad. Sit an amet aeque legimus, paulo mnesarchum et mea, et pri quodsi singulis.</p>
-                                        <p>
-                                        	<strong>Tel:</strong> <a href="#0">+44 543 53433</a><br>
-                                            <strong>Fax:</strong> <a href="#0">+44 543 5322</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div><!-- / row-->
-                            <hr>
-                            <div id="social">
-                                <ul>
-                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icon-google"></i></a></li>
-                                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                </ul>
-                            </div><!-- /social -->
-                        </div>
-                    </div><!-- /TAB 3:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-                </div><!-- /tab content -->
-            </div><!-- /container-fluid -->
-        </div><!-- /wrapper_in -->
-    </div><!-- /main_container -->
-
-    <div id="additional_links">
-        <ul>
-            <li>© Quote</li>
-            <li><a href="#0" class="animated_link">Purchase this template</a></li>
-            <li><a href="index_2.html" class="animated_link">Demo Slider</a></li>
-			<li><a href="index_3.html" class="animated_link">With UPLOAD</a></li>
-            <li><a href="index_4.html" class="animated_link">With Branch</a></li>
-            <li><a href="index_5.html" class="animated_link">Full Page View</a></li>
-            <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li>
-        </ul>
-    </div><!-- /add links -->
 
     <!-- Modal terms -->
     <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
@@ -440,6 +289,9 @@
 
 	<!-- SCRIPTS -->
     <!-- Jquery-->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <script src="../plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../administracion/admin-ajax.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <!-- Common script -->
     <script src="js/common_scripts_min.js"></script>

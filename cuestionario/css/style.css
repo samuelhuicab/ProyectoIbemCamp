@@ -620,9 +620,9 @@ footer ul li:first-child {
 .subheader#about {
     background: #fff4e3 url(../img/about_bg.svg) no-repeat center bottom;
 }
-.subheader#quote {
-    background: #0c0426 url(../img/quote_bg.svg) no-repeat center bottom;
-}
+/* .subheader#quote {
+    background: url(../../img/svg/banner3.0.png) no-repeat center bottom;
+} */
 .subheader#services {
     background: #fff4e3 url(../img/services_bg.svg) no-repeat center bottom;
 }

@@ -296,4 +296,48 @@ $(document).ready(function() {
   });
 
 
+  $('#formregistronuevo').on('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+      type: $(this).attr('method'),
+      data: formData,
+      processData: false,
+      contentType: false,
+      url: $(this).attr('action'),
+      dataType: 'json',
+      success: function(data) {
+        var resultado = data;
+        if (resultado.respuesta == 'exito') {
+          Swal.fire(
+            'Genial!',
+            'Te has inscrito Correctamente',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = 'index.php';
+          }, 1000);
+        }else if (resultado.respuesta == 'ArchivoAlta') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Usted ya dio de alta su comprobante. esta en revisión.',
+            })
+            setTimeout(function(){
+              window.location.href = 'comprobantepago.php';
+            }, 2000);
+        }else {
+          Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Error al subir el comprobante intente más tarde.',
+                    })
+        }
+      }
+
+
+
+    })
+  });
+
 });
