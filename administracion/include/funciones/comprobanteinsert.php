@@ -13,12 +13,12 @@ $insertar = false;
 
 try {
   require_once('bd_conexion.php');
-  $stmt = $conn->prepare("SELECT COUNT(*) AS Datos FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
+  $stmt = $conn->prepare("SELECT SUM(montopagado) AS ImportePagdo FROM usuarioscomprobante WHERE usuarioPreInscritoID  = ?;");
   $stmt->bind_param("s", $idusuario);
   $stmt->execute();
   $stmt->bind_result($cuentadatos);
   $stmt->fetch();
-  if ($cuentadatos > 0){
+  if ($cuentadatos > 600){
     $respuesta = array(
       'respuesta' => 'ArchivoAlta',             
     );

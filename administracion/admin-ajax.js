@@ -168,7 +168,7 @@ $(document).ready(function() {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Usted ya dio de alta su comprobante. esta en revisión.',
+            text: 'Ya ha pagado el monto total del campamento, no es necesario que suba otro archivo',
             })
             setTimeout(function(){
               window.location.href = 'comprobantepago.php';

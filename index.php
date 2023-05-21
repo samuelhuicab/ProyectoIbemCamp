@@ -130,7 +130,7 @@
             <!-- Main Headline Start -->
             <div class="main__headline">
               <div class="headline__content">
-                <span class="headline__subtitle light loading-el loading-el-1">!CAMPAMENTO IBEM¡</span>
+                <span class="headline__subtitle light loading-el loading-el-1">¡CAMPAMENTO IBEM!</span>
                 <h1 class="animated-headline light loading-el loading-el-2">
                   <span id="typed-strings">
                     <b>Blindados</b>

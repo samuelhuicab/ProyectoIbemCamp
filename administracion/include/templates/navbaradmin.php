@@ -96,7 +96,6 @@
                     <ul>
                         <li><a href="index.php"><i class="ti-home"></i> <span>Inicio</span></a></li>
                         <li><a href="comprobantepago.php"><i class="zmdi zmdi-paypal"></i> <span>Pagos</span></a></li>
-                        <li><a href="../cuestionario/index.php"><i class="fa fa-wpforms"></i> <span>Cuestionario</span></a></li>
                     </ul>
                 </nav>
 
