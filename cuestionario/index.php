@@ -225,7 +225,7 @@
                                                     </div>
                                                     <label>Mencionanos cómo es que te gusta que te digan.</label>
                                                     <div class="form-group textarea_info">
-                                                        <textarea name="apodo" class="form-control" style="height:150px;" placeholder=""></textarea>
+                                                        <textarea name="apodo" class="form-control required" style="height:150px;" placeholder=""></textarea>
                                                     </div>
                                                 </div>
                                             </div><!-- /step 2-->

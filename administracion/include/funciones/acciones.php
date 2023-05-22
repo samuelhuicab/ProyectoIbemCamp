@@ -198,18 +198,31 @@ if (isset($_POST['save-user'])) {
 
   try {
     require_once('bd_conexion.php');
-    $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ?;");
-    $stmt->bind_param("ss", $varificacion,$userid);
+    $stmt = $conn->prepare("SELECT verificacionComprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
+    $stmt->bind_param("s", $userid);
     $stmt->execute();
-    if ($stmt->affected_rows) {
+    $stmt->bind_result($estaverificado2);
+    $stmt->fetch();
+    if($estaverificado2==0){
       $respuesta = array(
-        'respuesta' => 'exito',
+        'respuesta' => 'varificado',
       );
     }else{
-      $respuesta = array(
-        'respuesta' => 'fallo',
-      );
+      $stmt->close();
+      $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ?;");
+      $stmt->bind_param("ss", $varificacion,$userid);
+      $stmt->execute();
+      if ($stmt->affected_rows) {
+        $respuesta = array(
+          'respuesta' => 'exito',
+        );
+      }else{
+        $respuesta = array(
+          'respuesta' => 'fallo',
+        );
+      }
     }
+
     $stmt->close();
     $conn->close();
   } catch (\Exception $e) {
@@ -217,17 +230,14 @@ if (isset($_POST['save-user'])) {
   }
 
 
-    die(json_encode($respuesta));
-
-
-
-
+  die(json_encode($respuesta));
 
  }
 
  if (isset($_POST['validacion-b-incorrecta'])) {
 
    $userid2 = $_POST['usuarioID2'];
+   $incorrecto = 0;
 
   try {
     require_once('bd_conexion.php');
@@ -242,8 +252,8 @@ if (isset($_POST['save-user'])) {
       );
     }else{
       $stmt->close();
-      $stmt = $conn->prepare("DELETE FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
-      $stmt->bind_param("s",$userid2);
+      $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ?;");
+      $stmt->bind_param("is",$incorrecto,$userid2);
       $stmt->execute();
       if ($stmt->affected_rows) {
         $respuesta = array(

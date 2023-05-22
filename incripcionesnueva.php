@@ -22,7 +22,7 @@ if (isset($_POST['enviar'])){
 
     $file_name = $_FILES['file']['name'];
     $file_tmp = $_FILES['file']['tmp_name'];
-    $nombrecomprobante = "ComprobantePago".$nombre."(".$apodo.")"."".$file_name;
+    $nombrecomprobante = "ComprobantePago".$nombre.$file_name;
     $status = "A";
     $route = "administracion/comprobantes/".$nombrecomprobante;
 

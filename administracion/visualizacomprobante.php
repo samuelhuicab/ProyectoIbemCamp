@@ -1,4 +1,18 @@
 <?php include_once 'include/funciones/sessionesadministrador.php'; ?>
+<?php
+    $question1=false;
+    $question2=false;
+    $question3=true;
+    if (isset($_GET['Q2'])) {
+        $question2 = true;
+        $question3=false;
+    }
+    if (isset($_GET['Q3'])) {
+        $question3 = true;
+        $question3=false;
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,8 +64,16 @@
             <?php
                 try {
                     require_once('include/funciones/bd_conexion.php');
-                    $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('1','0')";
-                    $resultado = $conn->query($sql);
+                    if ($question3){
+                        $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('1','0') LIMIT 5";
+                        $resultado = $conn->query($sql);
+                    }elseif($question2){
+                        $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('2','0') LIMIT 5";
+                        $resultado = $conn->query($sql);
+                    }else{
+                        $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('2','1') LIMIT 5";
+                        $resultado = $conn->query($sql);
+                    }
                 } catch (\Exception $e) {
                     echo $e->getMessage();
                 }
@@ -62,6 +84,11 @@
                     <div class="box">
                         <div class="box-head">
                             <h4 class="title">Comprobantes</h4>
+                            <div class="buttons-group">
+                                <a class="button button-outline button-info" href="visualizacomprobante.php?Q2=1">Visualizar Verificado</a>
+                                <a class="button button-outline button-info" href="visualizacomprobante.php?Q3=1">Visualizar Rechazado</a>
+                                <a class="button button-outline button-info" href="visualizacomprobante.php">Visualizar sin verificar</a>
+                            </div>
                         </div>
                         <div class="box-body">
                             <div class="table-responsive">

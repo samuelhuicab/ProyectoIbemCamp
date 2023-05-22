@@ -242,6 +242,12 @@ $(document).ready(function() {
           setTimeout(function(){
             window.location.href = 'visualizacomprobante.php';
           }, 1000);
+        }else if(resultado.respuesta == 'varificado'){
+          Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'El comprobante ya se ha rechazado.',
+                    })
         }else {
           Swal.fire({
                     icon: 'error',
