@@ -69,7 +69,7 @@
                                                     <li><a href="login.php?cerrar_session=true"><i class="zmdi zmdi-lock-open"></i>Cerrar Sesión</a></li>
                                                 </ul>
                                                 <ul>
-                                                    <li><a href="#"><i class="zmdi zmdi-paypal"></i>Mis pagos</a></li>
+                                                    <li><a href="mispagos.php"><i class="zmdi zmdi-paypal"></i>Mis pagos</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -95,7 +95,7 @@
                 <nav class="side-header-menu" id="side-header-menu">
                     <ul>
                         <li><a href="index.php"><i class="ti-home"></i> <span>Inicio</span></a></li>
-                        <li><a href="comprobantepago.php"><i class="zmdi zmdi-paypal"></i> <span>Pagos</span></a></li>
+                        <li><a href="mispagos.php"><i class="fa fa-ticket"></i> <span>Validar mis pagos</span></a></li>
                     </ul>
                 </nav>
 

@@ -105,8 +105,9 @@
                                             <th>Rechazar Comprobante</th>
                                         </tr>
                                     </thead>
-                                    <?php while ($usuarios = $resultado->fetch_assoc()) { ?>
+                                    
                                     <tbody>
+                                    <?php while ($usuarios = $resultado->fetch_assoc()) { ?>
                                         <tr>
                                             <td><?php echo $usuarios['usuarioPreInscritoID']?></td>
                                             <td><?php echo $usuarios['nombre']?></td>
@@ -138,9 +139,6 @@
                                             </td>
                                         </tr>
                                         <?php } ?>
-                                        <?php
-                                        $conn->close();
-                                        ?>
                                     </tbody>
                                 </table>
                             </div>

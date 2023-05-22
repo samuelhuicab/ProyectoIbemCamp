@@ -31,6 +31,17 @@
 <body>
     <div class="main-wrapper">
     <?php include_once 'include/templates/navbaradmin.php'; ?>  
+    <?php
+        try {
+            require_once('include/funciones/bd_conexion.php');
+            $usuario = $_SESSION['IDusuarioPre'];
+            $sql = "SELECT usuariosComprobanteID, usuarioPreInscritoID ,montoPagado, fechaCreacion, verificacionComprobante, Case WHEN verificacionComprobante = '1' then 'Verificado' WHEN verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN verificacionComprobante = '1' then 'success' WHEN verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color FROM usuarioscomprobante WHERE usuarioPreInscritoID = $usuario;";
+            $resultado = $conn->query($sql);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+
+    ?>
       
         <div class="content-body">
 
@@ -40,13 +51,13 @@
                 <!-- Page Heading Start -->
                 <div class="col-12 col-lg-auto mb-20">
                     <div class="page-heading">
-                        <h3 class="title">Alta Comprobante <span>/ Bienvenido</span></h3>
+                        <h3 class="title">Pagos <span>/ Bienvenido</span></h3>
                     </div>
                 </div><!-- Page Heading End -->
             </div><!-- Page Headings End -->
             <div class="col-12 col-lg-auto mb-20">
                 <div class="buttons-group">
-                    <a class="button button-outline button-primary" href="mispagos.php">Visualizar Pagos</a>
+                    <a class="button button-outline button-primary" href="comprobantepago.php">Documentar Pago</a>
                 </div>
             </div>
 
@@ -54,7 +65,7 @@
                     <!-- News & Updates Wrap Start -->
                     <div class="box">
                         <div class="box-head">
-                            <h4 class="title">Comprobantes</h4>
+                            <h4 class="title">Pagos Realizados</h4>
                         </div>
                         <div class="box-body">
                             <!-- News & Updates Inner Start -->
@@ -71,30 +82,29 @@
                                             <a href="#" class="new">Pago</a>
                                         </div>
                                         <!-- Title -->
-                                        <h4 class="title"><a href="#">Sube tu comprobante de pago para terminar el proceso de inscripción</a></h4>
+                                        <h4 class="title"><a href="#">Mis pagos</a></h4>
                                         <!-- Meta -->
-                                        <ul class="meta">
-                                            <li><i class="zmdi zmdi-time"></i>100 Houre ago</li>
-                                            <li>Por: <a href="#">Equipo Campamento</a></li>
-                                        </ul>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-vertical-middle">
+                                            <thead>
+                                                <th>Monto pagado</th>
+                                                <th>Fecha pago</th>
+                                                <th>Estatus</th>
+                                            </thead>
+                                            <?php while ($usuarios = $resultado->fetch_assoc()) { ?>
+                                            <tbody>
+                                                <td>$<?php echo $usuarios['montoPagado']?></td>
+                                                <td><?php echo $usuarios['fechaCreacion']?></td>
+                                                <td><span class="badge badge-<?php echo $usuarios['color']?>"><?php echo $usuarios['verificacionComprobante']?></span></td>
+                                            </tbody>
+                                            <?php } ?>
+                                            <?php
+                                            $conn->close();
+                                            ?>
+                                        </table>
                                     </div>
                                 </div>
-                                <form role="form" name="form-compro" id="form-compro" method="post" enctype="multipart/form-data" action="include/funciones/comprobanteinsert.php">
-                                    <!--Default Uploader Start-->
-                                    <div class="col-lg-6 col-12 mb-20">
-                                        <h6 class="mb-15">Sube tu archivo aqui:</h6>
-                                        <input class="dropify" name="file" id="file" type="file" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-12 mb-30"><input class="form-control" name="importe" type="number" placeholder="$" required=""></div>
-                                    <div class="botoniniciar">
-                                        <input type="hidden" name="subcompro" value="1">
-                                        <button name="subcompro" class="button button-round button-primary" type="submit">
-                                        <input type="hidden" name="usuario" value="<?php echo $_SESSION['nombre'] ?>">
-                                        <input type="hidden" name="idusuario" value="<?php echo $_SESSION['IDusuarioPre'] ?>">
-                                            <span>Subir Comprobante</span>
-                                        </button>
-                                    </div>
-                                </form>
                                 <!--Default Uploader End-->
                             </div><!-- News & Updates Inner End -->
                         </div>
