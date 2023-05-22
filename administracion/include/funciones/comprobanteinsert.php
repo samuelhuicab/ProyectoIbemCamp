@@ -18,7 +18,7 @@ try {
   $stmt->execute();
   $stmt->bind_result($cuentadatos);
   $stmt->fetch();
-  if ($cuentadatos > 600){
+  if ($cuentadatos >= 750){
     $respuesta = array(
       'respuesta' => 'ArchivoAlta',             
     );

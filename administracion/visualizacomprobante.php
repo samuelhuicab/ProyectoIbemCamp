@@ -50,7 +50,7 @@
             <?php
                 try {
                     require_once('include/funciones/bd_conexion.php');
-                    $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' ELSE 'warning' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID";
+                    $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('1','0')";
                     $resultado = $conn->query($sql);
                 } catch (\Exception $e) {
                     echo $e->getMessage();
@@ -103,7 +103,7 @@
                                             <td>
                                                 <form role="form" name="form-validacion-mal" id="form-validacion-mal"  method="post" action="include/funciones/acciones.php">
                                                     <div class="table-action-buttons">
-                                                        <input type="hidden" name="validacion-b-incorrecta" value="1">
+                                                        <input type="hidden" name="validacion-b-incorrecta" value="0">
                                                         <input type="hidden" name="usuarioID2" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
                                                         <button class="delete button button-box button-xs button-danger"><i class="ti-close"></i></button>
                                                     </div>

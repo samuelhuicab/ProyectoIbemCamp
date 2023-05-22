@@ -346,7 +346,7 @@
                 </p>
                 <p class="section__text">Pastor Víctor Villanueva 9993513339
                 </p>
-                <p class="section__text">Descarga el pdf donde viene toda la Información que necesitas saber. <a href="administracion/comprobantes/blindados.pdf" target="_blank" >Descarga aqui</a>
+                <p class="section__text">Descarga el pdf donde viene toda la Información que necesitas saber. <a href="administracion/comprobantes/info_campa_2023.pdf" target="_blank" >Descarga aqui</a>
                 </p>
               </div>
               <!-- Section Container - Section Title End -->

@@ -28,6 +28,7 @@ if (isset($_POST['enviar'])){
 
     $status = "A";
     $vacio = "";
+    $verificacion = 2;
 
     $insertacomprobante = false;
     $insertacuestionario = false;
@@ -64,8 +65,8 @@ if (isset($_POST['enviar'])){
 
         if ($insertacomprobante){
             move_uploaded_file($file_tmp,$route);
-            $stmt = $conn->prepare("INSERT INTO usuarioscomprobante(usuarioPreInscritoID,descripcionArchivo,nombreArchivo,rutaArchivo,estatus,montoPagado) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssssi",$id_registrousuarios, $nombrecomprobante, $file_name, $route, $status, $importe);
+            $stmt = $conn->prepare("INSERT INTO usuarioscomprobante(usuarioPreInscritoID,descripcionArchivo,nombreArchivo,rutaArchivo,estatus,montoPagado,verificacionComprobante) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssssii",$id_registrousuarios, $nombrecomprobante, $file_name, $route, $status, $importe, $verificacion);
             $stmt->execute();
             $id_registroComprobante = $stmt->insert_id;
             if ($id_registroComprobante > 0) {
