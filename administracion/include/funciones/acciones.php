@@ -195,11 +195,12 @@ if (isset($_POST['save-user'])) {
 
   $varificacion = $_POST['validacion-b-correcta'];
   $userid = $_POST['usuarioID'];
+  $comprobanteID = $_POST['comprobanteID'];
 
   try {
     require_once('bd_conexion.php');
-    $stmt = $conn->prepare("SELECT verificacionComprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
-    $stmt->bind_param("s", $userid);
+    $stmt = $conn->prepare("SELECT verificacionComprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = ? and usuariosComprobanteID = ?;");
+    $stmt->bind_param("ss", $userid,$comprobanteID);
     $stmt->execute();
     $stmt->bind_result($estaverificado2);
     $stmt->fetch();
@@ -209,8 +210,8 @@ if (isset($_POST['save-user'])) {
       );
     }else{
       $stmt->close();
-      $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ?;");
-      $stmt->bind_param("ss", $varificacion,$userid);
+      $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ? and usuariosComprobanteID = ?;");
+      $stmt->bind_param("sss", $varificacion,$userid,$comprobanteID);
       $stmt->execute();
       if ($stmt->affected_rows) {
         $respuesta = array(
@@ -237,12 +238,13 @@ if (isset($_POST['save-user'])) {
  if (isset($_POST['validacion-b-incorrecta'])) {
 
    $userid2 = $_POST['usuarioID2'];
+   $comprobanteid2 = $_POST['comprobanteID2'];
    $incorrecto = 0;
-
+   
   try {
     require_once('bd_conexion.php');
-    $stmt = $conn->prepare("SELECT verificacionComprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = ?;");
-    $stmt->bind_param("s", $userid2);
+    $stmt = $conn->prepare("SELECT verificacionComprobante FROM usuarioscomprobante WHERE usuarioPreInscritoID = ? and usuariosComprobanteID = ?;");
+    $stmt->bind_param("ss", $userid2,$comprobanteid2);
     $stmt->execute();
     $stmt->bind_result($estaverificado);
     $stmt->fetch();
@@ -252,8 +254,8 @@ if (isset($_POST['save-user'])) {
       );
     }else{
       $stmt->close();
-      $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ?;");
-      $stmt->bind_param("is",$incorrecto,$userid2);
+      $stmt = $conn->prepare("UPDATE usuarioscomprobante SET verificacionComprobante = ? WHERE usuarioPreInscritoID = ? and usuariosComprobanteID = ?;");
+      $stmt->bind_param("iss",$incorrecto,$userid2,$comprobanteid2);
       $stmt->execute();
       if ($stmt->affected_rows) {
         $respuesta = array(

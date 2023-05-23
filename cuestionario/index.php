@@ -238,27 +238,31 @@
 
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
+                                                        <label>Nombre Completo</label>
                                                             <input type="text" name="nombre" class="required form-control" placeholder="Nombre completo">
                                                         </div>
                                                         <div class="form-group">
+                                                        <label>Número Telefonico</label>
                                                             <input type="number" name="telefono" class="required form-control" placeholder="Número telefonico">
                                                         </div>
                                                     </div><!-- /col-sm-6 -->
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
+                                                        <label>Correo Electronico</label>
                                                             <input type="email" name="email" class="required form-control" placeholder="Email">
                                                         </div>
                                                         <div class="form-group">
+                                                        <label>Fecha de nacimiento</label>
                                                             <input type="date" name="nacimiento" step="1" max="2010-07-19" value="2010-07-19" class="required form-control" placeholder="Fecha de nacimiento">
                                                         </div>
+                                                        <input name="enviar" type="hidden" value="1">
                                                     </div>
                                                 </div><!-- /row -->
-                                                <div class="form-group checkbox_questions">
+                                                <!-- <div class="form-group checkbox_questions">
                                                     <input name="terms" type="checkbox" class="icheck required" value="yes">
                                                     <label>Please accept <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">terms and conditions</a> ?
                                                     </label>
-                                                    <input name="enviar" type="hidden" value="1">
-                                                </div>
+                                                </div> -->
 
                                             </div><!-- /step 4-->
 

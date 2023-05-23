@@ -65,13 +65,13 @@
                 try {
                     require_once('include/funciones/bd_conexion.php');
                     if ($question3){
-                        $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('1','0') LIMIT 5";
+                        $sql = "SELECT b.usuariosComprobanteID,a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('1','0') LIMIT 5";
                         $resultado = $conn->query($sql);
                     }elseif($question2){
-                        $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('2','0') LIMIT 5";
+                        $sql = "SELECT b.usuariosComprobanteID,a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('2','0') LIMIT 5";
                         $resultado = $conn->query($sql);
                     }else{
-                        $sql = "SELECT a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('2','1') LIMIT 5";
+                        $sql = "SELECT b.usuariosComprobanteID,a.usuarioPreInscritoID,a.nombre,a.email,a.telefono,b.descripcionArchivo, b.estatus, Case WHEN b.verificacionComprobante = '1' then 'Verificado' WHEN b.verificacionComprobante = '0' then 'Rechazado' ELSE 'Sin Verificar' END AS verificacionComprobante, Case WHEN b.verificacionComprobante = '1' then 'success' WHEN b.verificacionComprobante = '0' THEN 'warning' ELSE 'primary' END AS color  FROM usuariopreinscritos a INNER JOIN usuarioscomprobante b ON a.usuarioPreInscritoID = b.usuarioPreInscritoID WHERE b.verificacionComprobante NOT IN ('2','1') LIMIT 5";
                         $resultado = $conn->query($sql);
                     }
                 } catch (\Exception $e) {
@@ -124,6 +124,7 @@
                                                     <div class="table-action-buttons">
                                                         <input type="hidden" name="validacion-b-correcta" value="1">
                                                         <input type="hidden" name="usuarioID" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
+                                                        <input type="hidden" name="comprobanteID" value="<?php echo $usuarios['usuariosComprobanteID']?>">
                                                         <button class="edit button button-box button-xs button-success"><i class="ti-check"></i></button>
                                                     </div>
                                                 </form>
@@ -133,6 +134,7 @@
                                                     <div class="table-action-buttons">
                                                         <input type="hidden" name="validacion-b-incorrecta" value="0">
                                                         <input type="hidden" name="usuarioID2" value="<?php echo $usuarios['usuarioPreInscritoID']?>">
+                                                        <input type="hidden" name="comprobanteID2" value="<?php echo $usuarios['usuariosComprobanteID']?>">
                                                         <button class="delete button button-box button-xs button-danger"><i class="ti-close"></i></button>
                                                     </div>
                                                 </form>
