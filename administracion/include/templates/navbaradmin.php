@@ -62,14 +62,14 @@
                                             </div>
                                             <div class="body">
                                                 <ul>
-                                                    <li><a href="#"><i class="zmdi zmdi-account"></i>Perfil</a></li>
+                                                    <!-- <li><a href="#"><i class="zmdi zmdi-account"></i>Perfil</a></li> -->
                                                 </ul>
                                                 <ul>
-                                                    <li><a href="#"><i class="zmdi zmdi-settings"></i>Configuración</a></li>
-                                                    <li><a href="login.php?cerrar_session=true"><i class="zmdi zmdi-lock-open"></i>Cerrar Sesión</a></li>
-                                                </ul>
-                                                <ul>
+                                                    <!-- <li><a href="#"><i class="zmdi zmdi-settings"></i>Configuración</a></li> -->
                                                     <li><a href="mispagos.php"><i class="zmdi zmdi-paypal"></i>Mis pagos</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="login.php?cerrar_session=true"><i class="zmdi zmdi-lock-open"></i>Cerrar Sesión</a></li>
                                                 </ul>
                                             </div>
                                         </div>

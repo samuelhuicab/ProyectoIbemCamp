@@ -97,9 +97,9 @@
                                 <li><a href="tiempocaducidad.php"><span>Tiempo Caducidad Token</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="usuariospreinscritos.php"><i class="fa fa-hand-spock-o"></i> <span>Personas Pre Inscritas</span></a></li>
+                        <li><a href="usuariospreinscritos.php"><i class="fa fa-hand-spock-o"></i> <span>Personas Inscritas</span></a></li>
                         <li><a href="visualizacomprobante.php"><i class="ti-user"></i> <span>Personas Comprobante</span></a></li>
-                        <li><a href="../cuestionario/index.php"><i class="ti-notepad"></i> <span>Personas Cuestionario</span></a></li>
+                        <li><a href="recaudacion.php"><i class="zmdi zmdi-paypal"></i> <span>Dinero Recaudado</span></a></li>
                     </ul>
                 </nav>
 
