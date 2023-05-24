@@ -26,12 +26,21 @@
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
-    <meta name="theme-color" content="#0c0426">
-    <meta name="msapplication-navbutton-color" content="#0c0426">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0c0426">
+    <meta name="theme-color" content="#F4843C">
+    <meta name="msapplication-navbutton-color" content="#F4843C">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#F4843C">
     <!-- Custom Browser Color End -->
 </head>
 <body>
+    <div class="loader">
+      <div class="loader__content">
+        <div class="loader__logo fadeIn">
+          <!-- Your Logo Here -->
+          <img src="img/logocompartido.png" alt="IBEM">
+        </div>
+      </div>
+    </div>
+
     <nav id="menu" class="menu">
       <div class="menu__container">
     
@@ -78,7 +87,7 @@
                   </ul>
                 </div>
                 <div class="col-12 col-xl-6 text-align-right">
-                  <a class="email-link light" href="mailto:elmesias@gmail.com?subject=Message%20from%20your%20site">elmesias@gmail.com</a>
+                  <a class="email-link light" href="mailto:ibemar@gmail.com?subject=Message%20from%20your%20site">ibemar@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -117,7 +126,9 @@
               <div class="header__container">
                 <div class="header__content">
                   <!-- logo -->
-                  
+                  <div class="logo">
+                    <img src="img/logoverde.png" alt="IBEM">
+                  </div>
                   <a class="" style="color: #ffffff; font-size: 150%; " href="#0"><img src="img/logo_edet.png" style="width: 60%;" alt=""></a>
                   
                   <!-- menu trigger -->
@@ -238,7 +249,7 @@
                     </ul>
                   </div>
                   <div class="col-12 col-xl-6 text-align-right">
-                    <a class="email-link light" href="mailto:elmesias@gmail.com?subject=Quiero%20inscribirme%20al%20campamento">elmesias@gmail.com</a>
+                    <a class="email-link light" href="mailto:ibemar@gmail.com?subject=Quiero%20inscribirme%20al%20campamento">ibemar@gmail.com</a>
                   </div>
                 </div>
               </div>
@@ -344,7 +355,7 @@
                 </p>
                 <p class="section__text">Vianey Novelo 9997483914
                 </p>
-                <p class="section__text">Pastor Víctor Villanueva 9993513339
+                <p class="section__text">Víctor Villanueva 9993513339
                 </p>
                 <p class="section__text">Descarga el pdf donde viene toda la Información que necesitas saber. <a href="administracion/comprobantes/info_campa_2023.pdf" target="_blank" >Descarga aqui</a>
                 </p>
